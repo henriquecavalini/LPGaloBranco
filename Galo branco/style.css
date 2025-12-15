@@ -205,15 +205,12 @@ nav i {
     display: block; 
     
     /* Encosta a logo na borda esquerda do .hero-conteudo */
-    left: 0; 
+    left: -50px; 
     
     /* Coloca a logo no topo da seção (ajuste se precisar de mais espaço acima) */
     top: 0; 
     
     /* Importante para que a logo fique na frente do texto se houver sobreposição */
-
-    margin-left: 0;
-
     z-index: 10;
 
     text-align: left;
