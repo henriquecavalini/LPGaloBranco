@@ -199,14 +199,19 @@ nav i {
     position: absolute;
     
     /* Adiciona um espaçamento abaixo da logo para separá-la do título */
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     
     /* Garante que a imagem se comporte como um bloco para respeitar o margin: auto */
     display: block; 
     
-    /* Centraliza a imagem (se o text-align: center acima não funcionar sozinho) */
-    margin-left: -15;
-    margin-right: auto;
+    /* Encosta a logo na borda esquerda do .hero-conteudo */
+    left: 0; 
+    
+    /* Coloca a logo no topo da seção (ajuste se precisar de mais espaço acima) */
+    top: 0; 
+    
+    /* Importante para que a logo fique na frente do texto se houver sobreposição */
+    z-index: 10;
 
     text-align: left;
 }
