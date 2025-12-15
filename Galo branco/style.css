@@ -202,8 +202,10 @@ nav i {
     display: block; 
     
     /* Centraliza a imagem (se o text-align: center acima não funcionar sozinho) */
-    margin-left: auto;
-    margin-right: 500px;
+    margin-left: 0;
+    margin-right: auto;
+
+    text-align: left;
 }
 
 /* O elemento da imagem */
