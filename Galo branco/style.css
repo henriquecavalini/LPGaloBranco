@@ -85,8 +85,9 @@ nav i {
 .hero-conteudo {
     display: flex;
     align-items: center;
+    gap: 60px;
     justify-content: space-between;
-    padding-left: 120px;
+    padding-left: 200px;
 }
 
 .hero-texto {
@@ -113,9 +114,6 @@ nav i {
 
 /* --- Ajustes na Estrutura do Hero --- */
 
-.hero-texto {
-    width: 60%; /* Mais espaço para o texto */
-}
 
 .hero-imagem {
     /* Mantém as dimensões e o estilo de card */
@@ -190,17 +188,9 @@ nav i {
 }
 
 .logo-hero {
-     max-width: 250px;
+    max-width: 220px;
     height: auto;
-
-    display: block;
-
-    /* empurra a imagem para a esquerda */
-    margin-left: -60px;
-
-    /* garante que nada esconda */
-    position: relative;
-    z-index: 5;
+    flex-shrink: 0;
 }
 
 /* O elemento da imagem */
@@ -532,7 +522,8 @@ footer {
 @media (max-width: 768px) {
     .header-content, .hero-conteudo {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
+        padding-left: 20px;
     }
     
     .hero-texto, .hero-imagem {
