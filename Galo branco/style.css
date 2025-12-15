@@ -202,7 +202,7 @@ nav i {
     display: block; 
     
     /* Centraliza a imagem (se o text-align: center acima não funcionar sozinho) */
-    margin-left: 0;
+    margin-left: -15;
     margin-right: auto;
 
     text-align: left;
