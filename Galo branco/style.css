@@ -196,6 +196,7 @@ nav i {
     height: auto;
     
     /* Adiciona um espaçamento abaixo da logo para separá-la do título */
+    margin-right: 1900px;
     margin-bottom: 20px;
     
     /* Garante que a imagem se comporte como um bloco para respeitar o margin: auto */
