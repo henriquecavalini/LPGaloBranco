@@ -91,7 +91,13 @@ nav i {
 }
 
 .hero-texto {
-    width: 55%;
+    display: flex;
+    /* Alinha os itens verticalmente ao centro (ideal para logo e texto) */
+    align-items: center; 
+    /* Remove a centralização de texto global para evitar conflitos */
+    text-align: left; 
+    /* Ajuste de margem se necessário */
+    padding: 20px; 
 }
 
 .hero-texto h2 {
@@ -188,9 +194,24 @@ nav i {
 }
 
 .logo-hero {
-    max-width: 220px;
+    /* Define o tamanho da logo */
+    width: 150px; /* Ajuste este valor para o tamanho desejado */
     height: auto;
-    flex-shrink: 0;
+    
+    /* Adiciona um espaçamento à direita para separar do texto */
+    margin-right: 30px; 
+    
+    /* Garante que a logo fique na esquerda (início do container flex) */
+    align-self: flex-start; 
+    /* Opcional: Se quiser que ela fique centralizada verticalmente */
+    /* align-self: center; */
+}
+
+.texto-wrapper {
+    /* Permite que o texto ocupe o espaço restante */
+    flex-grow: 1; 
+    /* Centraliza o texto dentro do seu wrapper, se necessário */
+    text-align: center; 
 }
 
 /* O elemento da imagem */
