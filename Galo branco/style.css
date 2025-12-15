@@ -211,6 +211,9 @@ nav i {
     top: 0; 
     
     /* Importante para que a logo fique na frente do texto se houver sobreposição */
+
+    margin-left: 0;
+
     z-index: 10;
 
     text-align: left;
