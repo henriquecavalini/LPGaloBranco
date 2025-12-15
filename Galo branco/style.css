@@ -192,15 +192,8 @@ nav i {
 }
 
 .logo-hero {
-    max-width: 250px;
-    height: auto;
-
-    position: absolute;
-
-    top: 0;
-    left: 0; /* começa exatamente na esquerda do container */
-
-    z-index: 10;
+outline: 3px solid red;
+    background: rgba(255, 0, 0, 0.1);
 }
 
 
