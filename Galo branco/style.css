@@ -84,7 +84,6 @@ nav i {
 }
 
 .hero-conteudo {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -192,10 +191,18 @@ nav i {
 }
 
 .logo-hero {
-outline: 3px solid red;
-    background: rgba(255, 0, 0, 0.1);
-}
+     max-width: 250px;
+    height: auto;
 
+    display: block;
+
+    /* empurra a imagem para a esquerda */
+    margin-left: -60px;
+
+    /* garante que nada esconda */
+    position: relative;
+    z-index: 5;
+}
 
 /* O elemento da imagem */
 .header-logo-img {
