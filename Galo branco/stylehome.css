@@ -1,0 +1,572 @@
+:root {
+    --dark-bg: #222222;       /* Fundo Principal Escuro */
+    --light-text: #ffffff;    /* Texto Claro (Usado para a maioria dos textos) */
+    --accent-red: #d9534f;    /* Vermelho de Destaque (Fundo/Botões/Bordas) */
+    --accent-green: #5cb85c;  /* Verde para Contato/Promoções */
+    --soft-grey: #444444;     /* Cinza suave para cards/elementos */
+    --font: 'Montserrat', sans-serif;
+}
+
+/* Base Geral e Cores */
+body {
+    font-family: var(--font);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3, h4 {
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+.secao {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
+header {
+    background-color: var(--soft-grey);
+    padding: 15px 0;
+    border-bottom: 2px solid #333;
+    z-index: 1000; /* Garante que o menu fique acima */
+    position: relative;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--light-text);
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent-red); /* Destaque no hover */
+}
+
+nav i {
+    margin-right: 5px;
+    color: var(--light-text);
+}
+
+/* --- 2. HERO / SEÇÃO PRINCIPAL --- */
+.hero {
+    background-color: var(--dark-bg);
+    padding: 100px 0;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.hero-texto {
+    width: 55%;
+}
+
+.hero-texto h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--light-text);
+}
+
+.hero-texto h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* --- Card de Imagem/Instagram (Direita) --- */
+
+.hero-imagem {
+    width: 40%; 
+    padding: 20px;
+    background-color: var(--soft-grey);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.hero-imagem h4 {
+    color: var(--light-text);
+    margin-bottom: 15px;
+}
+
+.instagram-grid-placeholder {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+    font-size: 0.9em;
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.btn-link-insta {
+    color: var(--light-text);
+    text-decoration: none;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.btn-link-insta:hover {
+    color: var(--accent-red);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #333333; /* fundo igual ao da logo */
+    margin-top: -80px;
+}
+
+.logo-container img {
+    width: 280px;          /* tamanho bonito e proporcional */
+    max-width: 90%;        /* responsivo */
+    height: auto;          /* mantém proporção */
+}
+
+.logo-imagem {
+    display: flex; /* 🔑 Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--light-text);
+}
+
+/* O elemento da imagem */
+.header-logo-img {
+    /* 🔑 Dimensione sua imagem. Ajuste o valor '40px' conforme o tamanho da sua logo */
+    height: 60px; 
+    width: auto;
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* O texto (apenas para referência, se precisar de estilos específicos) */
+.logo-texto {
+    color: var(--light-text);
+}
+
+/* --- Botões CTA --- */
+.btn-cta {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;   
+}
+
+.btn-cta i {
+    margin-right: 8px;
+}
+
+.btn-vermelho {
+    background-color: var(--accent-green);
+    color: var(--light-text);
+}
+
+.btn-vermelho:hover {
+    background-color: #177400;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: var(--accent-green);
+    color: var(--light-text);
+}
+
+.btn-whatsapp:hover {
+    background-color: #449d44;
+    transform: translateY(-2px);
+}
+
+/* --- 3. SEÇÃO CINEMA FULL-WIDTH --- */
+.cinema-full-width {
+    background-color: #333333; 
+    padding: 60px 0;
+}
+
+.cinema-full-width h3 {
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.cinema-iframe-full-container {
+    width: 100%;
+    background-color: var(--light-text); 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cinema-iframe-full-width {
+    width: 100%; 
+    height: 800px; /* Grande altura para destaque */
+    border: none;
+    border-radius: 4px;
+    display: block;
+}
+
+/* --- 4. CARROSSEL DE PROMOÇÕES (OFERTAS) --- */
+
+.ofertas-carousel h3 {
+    color: var(--light-text);
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    
+    /* 🔑 Adiciona espaço para as setas laterais ficarem visíveis */
+    padding: 0 50px; 
+}
+
+/* A camada que recorta os cards */
+.carousel-clipper {
+    overflow: hidden; 
+    flex-grow: 1; 
+    z-index: 1; 
+}
+
+/* Container de Itens (Onde a animação ocorre) */
+.promocao-items-container {
+    display: flex;
+    width: fit-content; 
+    flex-wrap: nowrap; 
+    gap: 20px;
+    padding: 20px 0;
+
+    /* 🔑 ANIMAÇÃO PROFISSIONAL */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    transform: translateX(0); 
+
+    /* Remoção da Barra de Rolagem */
+    scrollbar-width: none;
+}
+
+.promocao-items-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Cards Individuais */
+.promocao-card {
+    flex-shrink: 0; 
+    min-width: 350px; /* Largura aumentada */
+    background-color: var(--soft-grey);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--light-text);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    pointer-events: auto; /* Garante que os cards sejam clicáveis */
+}
+
+.promocao-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); 
+}
+
+.produto-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.preco-antigo {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.preco-promocao {
+    color: var(--accent-green);
+    font-size: 1.6em;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.detalhes {
+    font-size: 0.9em;
+    color: #ccc;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+/* Setas de Navegação (Nav-Arrow) */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    
+    /* 🔑 POSICIONAMENTO FINAL: Centralizado verticalmente, flutuando sobre o clipper */
+    z-index: 10000; 
+    pointer-events: auto;
+    
+    background: rgba(34, 34, 34, 0.9); 
+    color: var(--light-text);
+    border: 2px solid var(--light-text); /* Borda para destacar */
+    padding: 10px 14px; 
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
+}
+
+.left-arrow {
+    left: 0; 
+    transform: translate(-50%, -50%); /* Move 50% para fora da borda esquerda */
+}
+
+.right-arrow {
+    right: 0; 
+    transform: translate(50%, -50%); /* Move 50% para fora da borda direita */
+}
+
+.nav-arrow:hover {
+    background: var(--accent-red); 
+    border: 2px solid transparent; 
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* --- 5. SEÇÃO SOBRE A LOJA (PÁGINA sobre.html) --- */
+
+.sobre-loja {
+    background-color: #333333; 
+    padding: 80px 0;
+}
+
+.sobre-loja h3 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.sobre-conteudo {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    text-align: left;
+}
+
+.sobre-texto {
+    width: 60%;
+}
+
+.sobre-localizacao {
+    width: 40%;
+}
+
+.sobre-texto h4, .sobre-localizacao h4 {
+    color: var(--accent-red);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.sobre-texto p {
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+.horarios-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--soft-grey);
+    border-radius: 8px;
+}
+
+.horarios-info h4 {
+    color: var(--light-text);
+}
+
+.horarios-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+
+.horarios-info ul li {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.horarios-info ul li i {
+    color: var(--accent-red);
+    margin-right: 10px;
+}
+
+.mapa-container {
+    width: 100%;
+    height: 260px;      /* ajuste se quiser maior/menor */
+    background: #222;   /* cor de fundo se a imagem não carregar */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mapa-imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* mantém a imagem preenchendo e cortando certinho */
+    display: block;
+    border-radius: 10px;
+}
+
+.btn-link {
+    color: var(--light-text);
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.btn-instagram {
+    /* Cor que remete ao Instagram (Roxo/Magenta) */
+    background-color: #ff8dfd; 
+    color: var(--light-text);
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-instagram:hover {
+    background-color: #af56ab; /* Cor um pouco mais escura no hover */
+    transform: translateY(-2px);
+}
+
+/* --- 6. RODAPÉ --- */
+footer {
+    background-color: #111111;
+    padding: 30px 0;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+
+.footer-info p {
+    color: #ccc;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- 7. RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .header-content, .hero-conteudo, .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-texto, .hero-imagem, .sobre-texto, .sobre-localizacao {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-imagem {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .btn-cta {
+        margin-right: 0;
+        display: block;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cinema-iframe-full-width {
+        height: 500px; 
+    }
+    
+    /* Carrossel no Mobile */
+    .promocao-card {
+        min-width: 90%; 
+    }
+
+    .carousel-wrapper {
+        padding: 0 10px; /* Reduz o padding lateral no mobile */
+    }
+
+    .left-arrow {
+        left: -15px; 
+    }
+    
+    .right-arrow {
+        right: -15px; 
+    }
+    
+    .mapa-iframe {
+        height: 300px;
+    }
+}

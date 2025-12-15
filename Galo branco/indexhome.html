@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós | FoodShop Galo Branco</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="icon" type="image/png" href="logofavicon.png">
+    <script src="https://kit.fontawesome.com/f58d7da5e6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script>
+        // Manter as variáveis de injeção aqui para o logo e WhatsApp
+        const LOJA_NOME = "SnackMania";
+        const WHATSAPP_NUMERO = "5516994398731";
+        const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
+    </script>
+
+    <header>
+        <div class="container header-content">
+
+            <a href="index.html" class="logo logo-imagem">
+                <img src="logo.png" alt="Logo SnackMania" class="header-logo-img">
+                <span class="logo-texto" id="logo-nome">Foodshop Galo Branco</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="indexhome.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li><a href="index.html#cinema-full"><i class="fa-solid fa-film"></i> Cinema</a></li>
+                    <li><a href="index.html#ofertas"><i class="fa-solid fa-tags"></i> Promoções</a></li>
+                    <li><a href="#contato"><i class="fa-solid fa-phone"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sobre" class="secao sobre-loja">
+            <div class="container">
+                <div class="logo-container">
+                    <img src="logomaior.png" alt="Logo Estabelecimento">
+                </div>
+
+                <h2 class="title-institucional">Nossa História e Missão</h2>
+
+                <div class="sobre-conteudo institucional-block">
+
+                    <div class="sobre-texto">
+                        <h3>Mais que Conveniência: Somos seu Ponto de Encontro.</h3>
+
+                        <p class="paragraph-large">
+                            A **SnackMania** nasceu em [Ano de Fundação, ex: 2018] com uma missão simples: transformar a
+                            espera no shopping em um momento de puro prazer e conveniência. Percebemos que os
+                            frequentadores do cinema e os clientes das lojas precisavam de um ponto de apoio rápido, de
+                            qualidade e que estivesse sempre disponível.
+                        </p>
+                        <p>
+                            Diferente das grandes redes, priorizamos produtos frescos, pipoca feita na hora com a
+                            receita secreta da casa, e um atendimento que faz você se sentir em casa. Nossa localização
+                            estratégica na Praça de Alimentação garante que você nunca perca o início do seu filme ou a
+                            promoção da loja vizinha por estar longe.
+                        </p>
+
+                        <div class="missao-valores">
+                            <h4>Nossos Valores Fundamentais</h4>
+                            <ul>
+                                <li><i class="fa-solid fa-cookie-bite"></i> **Qualidade:** Ingredientes frescos e
+                                    preparados diariamente.</li>
+                                <li><i class="fa-solid fa-clock"></i> **Disponibilidade:** Abertos 24 horas, 7 dias por
+                                    semana.</li>
+                                <li><i class="fa-solid fa-handshake"></i> **Praticidade:** Rapidez no serviço e
+                                    localização estratégica.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                    <div class="sobre-localizacao">
+                        <h3>📍 Localização e Contato</h3>
+
+                        <div class="localizacao-info-block">
+                            <h4>Endereço Completo</h4>
+                            <p>
+                                Shopping [Nome do Shopping]<br>
+                                Praça de Alimentação Central (Ao lado do Cinema)<br>
+                                [Nome da Cidade], [Estado]
+                            </p>
+
+                            <h4>🕒 Horário de Atendimento</h4>
+                            <p>
+                                **Operação 24 Horas:** Atendemos a todos os horários de sessão e o público noturno do
+                                shopping.<br>
+                                <span class="destaque-atendimento">Estamos sempre abertos.</span>
+                            </p>
+                        </div>
+
+                        <div class="mapa-container">
+                            <img src="galo.png" alt="Mapa da localização" class="mapa-imagem">
+                        </div>
+
+                        <a href="https://www.google.com.br/maps/place/Galo+Branco+Shop+%2F+Franca+Shopping/@-20.5474299,-47.4200726,17z/data=!3m1!4b1!4m6!3m5!1s0x94b0a7d0d37eb289:0x921d5ba706cbb92d!8m2!3d-20.5474349!4d-47.4174977!16s%2Fg%2F1pzsn7bdt?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D"
+                            target="_blank" class="btn-link">Ver no Google Maps</a>
+                    </div>
+
+                </div>
+
+                <div style="margin-top: 50px; text-align: center;margin-right: 450px;">
+                    <a href="#contato" class="btn-cta btn-vermelho" id="cta-whatsapp-sobre"><i
+                            class="fa-brands fa-whatsapp"></i>
+                        Falar com um Atendente Agora</a>
+                </div>
+
+                <div style="margin-top: -70px; text-align: right;margin-right: 250px;">
+
+
+                    <a href="https://www.instagram.com/galobrancoshop/" target="_blank" class="btn-cta btn-instagram"><i
+                            class="fa-brands fa-instagram"></i> Ver Posts Nossos no Instagram </a>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato">
+    </footer>
+
+    <script>
+        // O JavaScript para o carrossel NÃO VAI AQUI.
+        // Apenas a injeção de nome e WhatsApp.
+        document.addEventListener("DOMContentLoaded", function () {
+            // Injeção do Nome (H1)
+
+            const ctaWhatsappSobre = document.getElementById('cta-whatsapp-sobre');
+            if (ctaWhatsappSobre) {
+                ctaWhatsappSobre.href = WHATSAPP_URL;
+            }
+        });
+    </script>
+</body>
+
+</html>

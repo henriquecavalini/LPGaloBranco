@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnackMania | Food Shop e Conveniência no Shopping</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logofavicon.png">
+    <script src="https://kit.fontawesome.com/f58d7da5e6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <script>
+        const LOJA_NOME = "Foodshop Galo Branco";
+        const WHATSAPP_NUMERO = "5516994398731";
+        const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
+    </script>
+
+    <header>
+        <div class="container header-content">
+            <a class="logo logo-imagem">
+                <img src="logo.png" alt="Logo SnackMania" class="header-logo-img">
+                <span class="logo-texto" id="logo-nome">Foodshop Galo Branco</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="indexhome.html"><i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li><a href="index.html"><i class="fa-solid fa-film"></i> Cinema & Promoções</a></li>
+                    <li><a href="#contato"><i class="fa-solid fa-phone"></i> Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="principal" class="hero">
+        <div class="container hero-conteudo">
+
+            <div class="hero-texto">
+                <h2>Seu Ponto de Encontro com o Sabor.</h2>
+                <h3>Loja de Conveniência, Lanches Rápidos e Pipoca de Cinema.</h3>
+                <p class="subtitle">Localizada no coração do Shopping, estamos abertos 24h para atender sua fome a
+                    qualquer momento.</p>
+
+                <a href="#ofertas" class="btn-cta btn-vermelho"><i class="fa-solid fa-ticket"></i> Ver Promoções de
+                    Combo!</a>
+                <a href="#" class="btn-cta btn-whatsapp" target="_blank" id="cta-whatsapp"><i
+                        class="fa-brands fa-whatsapp"></i>Chamar no WhatsApp</a>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="cinema-full" class="secao cinema-full-width">
+        <div class="container">
+            <h3>📽️ Horários de Cinema em Destaque!</h3>
+            <div class="cinema-iframe-full-container">
+                    <iframe
+                        src="https://www.veloxtickets.com/Portal/Local/Cinema/Franca/Moviecom-Cinemas-Franca/FRC"
+                        title="Horários do Cinema Completa" class="cinema-iframe-full-width">
+                    </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="ofertas" class="secao ofertas-carousel">
+        <div class="container">
+            <h3>Promoções</h3>
+
+            <div class="carousel-wrapper">
+                <button class="nav-arrow left-arrow" id="btnLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="nav-arrow right-arrow" id="btnRight"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="promocao-items-container" id="promocoes-slider">
+
+                    <div class="promocao-card">
+                        <img src="coca.jpg" class="produto-img">
+                        <h4>Promoção 1</h4>
+                        <span class="preco-antigo">R$ 15,90</span>
+                        <span class="preco-promocao">R$ 9,90</span>
+                        <p class="detalhes">Descrição rápida da promoção.</p>
+                    </div>
+
+                    <div class="promocao-card">
+                        <img src="cocappc.jpg" class="produto-img">
+                        <h4>Promoção 2</h4>
+                        <span class="preco-antigo">R$ 35,00</span>
+                        <span class="preco-promocao">R$ 29,90</span>
+                        <p class="detalhes">Mais uma oferta pra chamar atenção.</p>
+
+                    </div>
+
+                    <div class="promocao-card">
+                        <img src="coxinha.PNG" class="produto-img">
+                        <h4>Promoção 3</h4>
+                        <span class="preco-antigo">R$ 19,90</span>
+                        <span class="preco-promocao">R$ 14,90</span>
+                        <p class="detalhes">Outra promoção bacana.</p>
+
+                    </div>
+                    <div class="promocao-card">
+                        <img src="ppc.PNG" class="produto-img">
+                        <h4>Promoção 4</h4>
+                        <span class="preco-antigo">R$ 28,00</span>
+                        <span class="preco-promocao">R$ 19,90</span>
+                        <p class="detalhes">Lanche completo, perfeito para o almoço.</p>
+                    </div>
+
+                    <div class="promocao-card">
+                        <img src="pepsi.PNG" class="produto-img">
+                        <h4>Promoção 5</h4>
+                        <span class="preco-antigo">R$ 8,00</span>
+                        <span class="preco-promocao">R$ 5,50</span>
+                        <p class="detalhes">Opção saudável e refrescante.</p>
+                    </div>
+
+                    <div class="promocao-card">
+                        <img src="salgado.PNG" class="produto-img">
+                        <h4>Promoção 6</h4>
+                        <span class="preco-antigo">R$ 10,00</span>
+                        <span class="preco-promocao">R$ 6,99</span>
+                        <p class="detalhes">Coxinha ou Esfiha. Escolha o seu!</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="container">
+            <img src="logovariacao.PNG" alt="Logo SnackMania" class="header-logo-img">
+            <p class="logo"> Foodshop Galo Branco</p>
+            <p>Localização: Franca Shopping, Av. Rio Negro, 1100 - Jardim Roselandia, Franca - SP, 14406-00 | Aberto das 10 da Manhã as 10 da Noite !</p>
+            <p class="copyright">&copy; 2025 Foodshop Galo Branco. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const LOJA_NOME = "Foodshop Galo Branco"; // opcional, já tinha no seu script
+            const WHATSAPP_NUMERO = "5516994398731";
+            const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
+
+            // Injeções UI (mantive)
+            const ctaWhatsapp = document.getElementById('cta-whatsapp');
+            if (ctaWhatsapp) { ctaWhatsapp.href = WHATSAPP_URL; ctaWhatsapp.target = "_blank"; }
+
+            // Elementos do carrossel
+            const slider = document.getElementById('promocoes-slider');
+            const leftArrow = document.getElementById('btnLeft');
+            const rightArrow = document.getElementById('btnRight');
+
+            if (!slider) { console.error("Slider não encontrado (#promocoes-slider)."); return; }
+            if (!leftArrow || !rightArrow) { console.error("Setas não encontradas (btnLeft/btnRight)."); }
+
+            // DEBUG: confirma clique
+            leftArrow.addEventListener('click', e => { console.log('left clicked'); });
+            rightArrow.addEventListener('click', e => { console.log('right clicked'); });
+
+            // Segurança: força tipo button (evita comportamento de submit)
+            leftArrow.type = "button";
+            rightArrow.type = "button";
+
+            // Medidas
+            let currentX = 0;
+            const gap = 20;
+            // calc distance dinamicamente pela largura do primeiro card visível
+            function getScrollDistance() {
+                const firstCard = slider.querySelector('.promocao-card');
+                if (!firstCard) return 300;
+                // usa largura real do elemento (incluindo gap)
+                const style = window.getComputedStyle(firstCard);
+                const w = firstCard.getBoundingClientRect().width;
+                const g = parseInt(style.marginRight || gap) || gap;
+                return Math.round(w + gap);
+            }
+
+            function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
+
+            function updateTransform() {
+                slider.style.transform = `translateX(${currentX}px)`;
+            }
+
+            // calcula máximo deslocamento negativo (quando exposto todo o conteúdo)
+            function getMaxNegative() {
+                const maxScroll = slider.scrollWidth - (slider.parentElement ? slider.parentElement.clientWidth : document.documentElement.clientWidth);
+                return -Math.max(0, Math.floor(maxScroll));
+            }
+
+            leftArrow.addEventListener('click', () => {
+                const distance = getScrollDistance();
+                currentX = clamp(currentX + distance, getMaxNegative(), 0);
+                updateTransform();
+            });
+
+            rightArrow.addEventListener('click', () => {
+                const distance = getScrollDistance();
+                currentX = clamp(currentX - distance, getMaxNegative(), 0);
+                updateTransform();
+            });
+
+            // Acessibilidade: navegação por teclado
+            leftArrow.addEventListener('keydown', e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); leftArrow.click(); } });
+            rightArrow.addEventListener('keydown', e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); rightArrow.click(); } });
+
+            // Reajusta se redimensionar
+            window.addEventListener('resize', () => {
+                // garante que não fique deslocado além do permitido
+                currentX = clamp(currentX, getMaxNegative(), 0);
+                updateTransform();
+            });
+        });
+    </script>
+</body>
+
+</html>

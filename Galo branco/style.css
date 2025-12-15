@@ -1,0 +1,563 @@
+:root {
+    --dark-bg: #222222;       /* Fundo Principal Escuro */
+    --light-text: #ffffff;    /* Texto Claro */
+    --accent-red: #d9534f;    /* Vermelho de Destaque (Para promoções/CTA) */
+    --accent-green: #5cb85c;  /* Verde para Contato */
+    --soft-grey: #444444;     /* Cinza suave para cards/elementos */
+    --font: 'Montserrat', sans-serif;
+}
+
+/* Base Geral e Cores */
+body {
+    font-family: var(--font);
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2, h3, h4 {
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+.secao {
+    padding: 60px 0;
+    text-align: center;
+}
+
+/* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
+header {
+    background-color: var(--soft-grey);
+    padding: 15px 0;
+    border-bottom: 2px solid #333;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--light-text);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--light-text);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--light-text);
+}
+
+nav i {
+    margin-right: 5px;
+    color: var(--light-text);
+}
+
+/* --- 2. HERO / SEÇÃO PRINCIPAL --- */
+.hero {
+    background-color: var(--dark-bg);
+    padding: 100px 0;
+    margin: 0 auto;
+    margin-left: 550px;
+}
+
+.hero-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.hero-texto {
+    width: 55%;
+}
+
+.hero-texto h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--light-text); /* Destaque no título */
+}
+
+.hero-texto h3 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #ccc;
+}
+
+/* --- Ajustes na Estrutura do Hero --- */
+
+.hero-texto {
+    width: 60%; /* Mais espaço para o texto */
+}
+
+.hero-imagem {
+    /* Mantém as dimensões e o estilo de card */
+    width: 40%; 
+    padding: 20px;
+    background-color: var(--soft-grey);
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    
+    /* Garante que os itens internos fiquem centralizados */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+}
+
+/* NOVO: Estiliza o card que foi movido para o Hero */
+.card-horarios-hero .link-card {
+    /* Garante que o card preencha o espaço da coluna */
+    width: 100%; 
+    padding: 30px;
+    background-color: var(--soft-grey); /* Fundo do card */
+    border-top: 5px solid #f39c12; /* Cor de destaque (Amarelo/Dourado) */
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Garante que o hover funcione corretamente na nova posição */
+.card-horarios-hero .link-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+
+/* --- Ajuste na Seção de Promoções Antiga --- */
+/* Certifique-se de que a seção de promoções agora só exiba o conteúdo restante (se houver) */
+.promocao-card-container {
+    /* Se só restar 1 item, centraliza ele */
+    justify-content: center; 
+}
+
+.imagem-destaque {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px; /* Borda suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra pesada para destacar no fundo escuro */
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    background-color: #111111; /* fundo igual ao da logo */
+    margin-top: -80px;
+}
+
+.logo-container img {
+    width: 280px;          /* tamanho bonito e proporcional */
+    max-width: 90%;        /* responsivo */
+    height: auto;          /* mantém proporção */
+}
+
+.logo-imagem {
+    display: flex; /* 🔑 Alinha a imagem e o texto lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    text-decoration: none;
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--light-text);
+}
+
+/* O elemento da imagem */
+.header-logo-img {
+    /* 🔑 Dimensione sua imagem. Ajuste o valor '40px' conforme o tamanho da sua logo */
+    height: 60px; 
+    width: auto;
+    margin-right: 10px; /* Espaçamento entre a imagem e o texto */
+}
+
+/* O texto (apenas para referência, se precisar de estilos específicos) */
+.logo-texto {
+    color: var(--light-text);
+}
+
+/* Botões CTA */
+.btn-cta {
+    display: inline-block;
+    text-decoration: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-cta i {
+    margin-right: 8px;
+}
+
+.btn-vermelho {
+    background-color: var(--accent-red);
+    color: var(--light-text);
+}
+
+.btn-vermelho:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+    background-color: var(--accent-green);
+    color: var(--light-text);
+}
+
+.btn-whatsapp:hover {
+    background-color: #449d44;
+    transform: translateY(-2px);
+}
+
+/* --- 3. CINEMA E PROMOÇÕES --- */
+
+/* --- ESTILOS DO CARD DO IFRAME --- */
+
+.hero-imagem.instagram-feed-hero {
+    /* Mantém o estilo de card da coluna */
+    padding: 20px; 
+    /* Garante que o conteúdo seja cortado (se o feed for muito longo) */
+    overflow: hidden; 
+}
+
+.instagram-iframe-widget {
+    /* Garante que o iframe ocupe toda a largura disponível no card */
+    width: 100%; 
+    /* 🔑 Altura para mostrar 1 ou 2 posts. Ajuste conforme necessário. */
+    height: 300px; 
+    border: none;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.instagram-grid-placeholder {
+    width: 100%;
+    height: 300px; /* Altura definida */
+    background-color: #333; /* Fundo mais escuro que o card */
+    border-radius: 4px;
+    
+    /* Garante que o conteúdo interno (ícone/texto) fique centralizado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: #ccc;
+    font-size: 0.9em;
+    padding: 10px; /* Adiciona um padding interno para o conteúdo não colar na borda */
+    box-sizing: border-box; /* Garante que o padding não aumente o tamanho total */
+}
+
+.cinema-full-width {
+    background-color: #333333; 
+    padding: 60px 0;
+}
+
+.cinema-full-width h3 {
+    color: var(--light-text);
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.cinema-iframe-full-container {
+    width: 100%;
+    /* Fundo levemente claro para destacar o iframe */
+    background-color: var(--light-text); 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.cinema-iframe-full-width {
+    /* Ocupa a largura total do container pai */
+    width: 100%; 
+    
+    /* 🔑 CHAVE PARA O TAMANHO: Altura grande para destaque */
+    height: 800px; 
+    
+    border: none;
+    border-radius: 4px;
+    display: block;
+}
+
+/* Garante que a coluna da direita se ajuste ao novo conteúdo */
+.card-horarios-hero {
+    width: 35%; 
+    display: flex;
+    justify-content: center;
+}
+
+/* --- ESTILOS DO CARROSSEL DE PROMOÇÕES (CONSOLIDADO E CORRIGIDO) --- */
+
+.ofertas-carousel h3 {
+    color: var(--light-text);
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.carousel-wrapper {
+    position: relative;
+    overflow: hidden;       /* garante recorte */
+    pointer-events: auto;   /* garante que receba eventos */
+    z-index: 1;
+}
+.carousel-clipper {
+    overflow: hidden; 
+    flex-grow: 1; 
+    /* 🔑 Adiciona um z-index baixo para o clipper */
+    z-index: 1;
+    pointer-events: none; 
+}
+
+#promocoes-slider, .promocao-items-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(0);
+    will-change: transform;
+    pointer-events: auto;
+}
+
+/* Container de Itens (Onde a animação ocorre) */
+.promocao-items-container {
+    display: flex;
+    /* overflow-x: hidden; removido daqui para o wrapper */
+    z-index: 5; 
+    
+    /* 🔑 ANIMAÇÃO PROFISSIONAL: Velocidade e estilo */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    transform: translateX(0); 
+    
+    padding: 20px 0;
+    width: fit-content; /* CRÍTICO: Permite que todos os cards caibam em uma linha */
+    flex-wrap: nowrap; /* CRÍTICO: Impede a quebra de linha */
+    gap: 20px;
+    
+    /* Remoção da Barra de Rolagem */
+    scrollbar-width: none; /* Firefox */
+    pointer-events: auto;
+}
+
+.promocao-items-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari */
+}
+
+/* Cards Individuais */
+.promocao-card {
+    flex-shrink: 0; 
+    min-width: 400px;
+    background-color: var(--soft-grey);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--light-text);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    pointer-events: auto;
+}
+
+.promocao-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7); 
+}
+
+/* Texto de Preço e Detalhes */
+.preco-antigo {
+    text-decoration: line-through;
+    color: #aaa;
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.produto-img{
+    width: 200px;
+    height: auto;
+}
+
+.preco-promocao {
+    color: var(--accent-green);
+    font-size: 1.6em;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* CORREÇÃO 2: Nome da classe de detalhes */
+.detalhes {
+    font-size: 0.9em;
+    color: #ccc;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+
+/* Setas de Navegação (Nav-Arrow) */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(34, 34, 34, 0.9);
+    color: var(--light-text);
+    border: none;
+    padding: 10px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;               /* acima de tudo */
+    pointer-events: auto;        /* SEMPRE permitir clique */
+    font-size: 1.2em;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.nav-arrow:hover {
+    background: var(--accent-red); 
+    transform: translateY(-50%) scale(1.1);
+}
+
+.left-arrow {
+    left: 8px; /* Posição na borda */
+}
+
+.right-arrow {
+    right: 8px; /* Posição na borda */
+}
+
+
+/* --- OUTRAS CORREÇÕES ÚTEIS --- */
+
+/* CORREÇÃO 4: O seletor nav a:hover estava branco sobre branco, mas você já corrigiu. */
+/* nav a:hover { color: var(--light-text); } */ 
+
+/* Garante que o botão secundário tenha o contraste correto */
+.btn-secundario {
+    background-color: var(--accent-red);
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-secundario {
+    background-color: var(--accent-red);
+    color: var(--light-text);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.btn-link {
+    color: var(--accent-red);
+    text-decoration: none;
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+
+/* --- 4. SOBRE A LOJA --- */
+.sobre-loja {
+    background-color: var(--dark-bg);
+}
+
+/* --- 5. RODAPÉ --- */
+footer {
+    background-color: #111111;
+    padding: 30px 0;
+    border-top: 2px solid #333;
+    text-align: center;
+}
+
+.footer-info {
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    color: #ccc;
+}
+
+.copyright {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .header-content, .hero-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-texto, .hero-imagem {
+        width: 100%;
+        padding: 0;
+    }
+    
+    .hero-imagem {
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .promocao-card-container {
+        flex-direction: column;
+    }
+    
+    .btn-cta {
+        margin-right: 0;
+        display: block;
+    }
+    
+    .logo {
+        margin-bottom: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .promocao-card {
+        min-width: 80%; /* Mostra 1 card grande no celular */
+    }
+    
+    .left-arrow {
+        left: 0px;
+    }
+    
+    .right-arrow {
+        right: 0px;
+    }
+}
