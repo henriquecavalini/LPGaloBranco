@@ -192,29 +192,17 @@ nav i {
 }
 
 .logo-hero {
-    /* Define um tamanho máximo para a logo (ajuste conforme o necessário) */
-    max-width: 250px; 
+    max-width: 250px;
     height: auto;
 
     position: absolute;
-    
-    /* Adiciona um espaçamento abaixo da logo para separá-la do título */
-    margin-bottom: 15px;
-    
-    /* Garante que a imagem se comporte como um bloco para respeitar o margin: auto */
-    display: block; 
-    
-    /* Encosta a logo na borda esquerda do .hero-conteudo */
-    left: -50px; 
-    
-    /* Coloca a logo no topo da seção (ajuste se precisar de mais espaço acima) */
-    top: 0; 
-    
-    /* Importante para que a logo fique na frente do texto se houver sobreposição */
-    z-index: 10;
 
-    text-align: left;
+    top: 0;
+    left: 0; /* começa exatamente na esquerda do container */
+
+    z-index: 10;
 }
+
 
 /* O elemento da imagem */
 .header-logo-img {
