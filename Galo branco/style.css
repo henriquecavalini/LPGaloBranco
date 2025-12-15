@@ -84,6 +84,7 @@ nav i {
 }
 
 .hero-conteudo {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -194,6 +195,8 @@ nav i {
     /* Define um tamanho máximo para a logo (ajuste conforme o necessário) */
     max-width: 250px; 
     height: auto;
+
+    position: absolute;
     
     /* Adiciona um espaçamento abaixo da logo para separá-la do título */
     margin-bottom: 20px;
