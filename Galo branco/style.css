@@ -190,6 +190,22 @@ nav i {
     color: var(--light-text);
 }
 
+.logo-hero {
+    /* Define um tamanho máximo para a logo (ajuste conforme o necessário) */
+    max-width: 250px; 
+    height: auto;
+    
+    /* Adiciona um espaçamento abaixo da logo para separá-la do título */
+    margin-bottom: 20px;
+    
+    /* Garante que a imagem se comporte como um bloco para respeitar o margin: auto */
+    display: block; 
+    
+    /* Centraliza a imagem (se o text-align: center acima não funcionar sozinho) */
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* O elemento da imagem */
 .header-logo-img {
     /* 🔑 Dimensione sua imagem. Ajuste o valor '40px' conforme o tamanho da sua logo */
