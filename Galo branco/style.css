@@ -80,14 +80,13 @@ nav i {
     background-color: var(--dark-bg);
     padding: 100px 0;
     margin: 0 auto;
-    margin-left: 550px;
 }
 
 .hero-conteudo {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-align: left;
+    padding-left: 120px;
 }
 
 .hero-texto {
