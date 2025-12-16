@@ -538,56 +538,19 @@ footer {
 }
 
 /* --- RESPONSIVIDADE --- */
-@media (min-width: 768px) and (max-width: 1200px) {
-    
-    /* Container com mais respiro lateral */
-    .container {
-        width: 95%;
-    }
-
-    /* HEADER: Garante que o menu principal seja legível */
-    .header-content {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    /* HERO SECTION: Mantém as colunas, mas otimiza o espaço */
+@media (min-width: 768px) and (max-width: 1024px) {
     .hero-conteudo {
-        flex-direction: row; 
-        gap: 20px;
-        align-items: flex-start; /* Alinha o conteúdo ao topo da seção */
-    }
-    
-    .hero-texto {
-        width: 55%; /* Reduz a largura para evitar corte */
-        text-align: left; /* Mantém o alinhamento de texto à esquerda */
+        flex-direction: column;
+        text-align: center;
     }
 
-    .hero-texto h2 {
-        font-size: 2.5em; /* Reduz o título principal */
-    }
-    
-    .hero-texto h3 {
-        font-size: 1.5em; 
+    .hero-texto,
+    .hero-imagem {
+        width: 100%;
     }
 
     .hero-imagem {
-        width: 35%; 
-    }
-    
-    /* SOBRE NÓS: Colunas lado a lado, 50% cada */
-    .sobre-conteudo {
-        flex-direction: row;
-        gap: 30px;
-    }
-    
-    .sobre-texto, .sobre-localizacao {
-        width: 50%;
-    }
-    
-    /* CARDS: Ajusta a largura mínima para caber mais de um, se possível */
-    .promocao-card {
-        min-width: 300px;
+        margin-bottom: 30px;
     }
 }
 
@@ -597,12 +560,13 @@ footer {
         flex-direction: column; /* 🔑 EMPILHA: Transforma em uma única coluna */
         align-items: center;    /* Centraliza os blocos (eixo horizontal) */
         text-align: center;     /* Centraliza o texto dentro dos blocos */
+        padding: 0 20px;
     }
     
     /* Garante que todos os elementos ocupem a largura total, com respiro */
     .hero-texto, .hero-imagem, .sobre-texto, .sobre-localizacao {
         width: 100%;
-        padding: 0 20px; /* 🔑 CRÍTICO: Espaçamento interno para o conteúdo não cortar */
+        padding: 0;
         box-sizing: border-box; /* Garante que o padding não cause vazamento */
     }
     
@@ -653,4 +617,8 @@ footer {
     .sobre-loja h2.title-institucional {
         font-size: 2em;
     }
+
+    .promocao-card {
+    width: clamp(260px, 85vw, 320px);
+}
 }
