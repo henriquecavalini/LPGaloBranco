@@ -88,6 +88,7 @@ nav i {
     gap: 60px;
     justify-content: center;
     padding-left: 200px;
+    max-width: 100%;
 }
 
 .hero-texto {
@@ -539,23 +540,36 @@ footer {
 
 /* --- RESPONSIVIDADE --- */
 @media (min-width: 768px) and (max-width: 1024px) {
+
     .hero-conteudo {
+        display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         text-align: center;
-        gap: 25px;
+        width: 100%;
+        padding: 0 24px;
+        box-sizing: border-box;
     }
 
-    .hero-imagem,
+    .hero-imagem {
+        width: 100%;
+        max-width: 180px;
+        margin-bottom: 24px;
+    }
+
     .hero-texto {
         width: 100%;
-        max-width: 600px;
+        max-width: 720px; /* 🔑 mais espaço pro texto */
+        margin: 0 auto;
     }
 
     .hero-texto h2 {
-        font-size: 2.2em;
-        line-height: 1.2;
-        word-break: keep-all; /* 🔑 impede quebra feia */
+        font-size: 2.3em;
+        line-height: 1.25;
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: normal;
     }
 }
 
