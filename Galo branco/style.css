@@ -537,48 +537,20 @@ footer {
     color: #666;
 }
 
-/* --- RESPONSIVIDADE --- */
-@media  (max-width: 1024px) {
+/* ========================================================= */
+/* --- RESPONSIVIDADE PARA TABLET E MOBILE --- */
+/* (MAX-WIDTH: 1024px cobre a maioria dos tablets e celulares) */
+/* ========================================================= */
+@media (max-width: 1024px) {
 
-    .hero-conteudo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-        padding: 0 24px;
-        box-sizing: border-box;
-    }
-
-    .hero-imagem {
-        width: 100%;
-        max-width: 180px;
-        margin-bottom: 24px;
-    }
-
-    .hero-texto {
-        width: 100%;
-        max-width: 720px; /* 🔑 mais espaço pro texto */
-        margin: 0 auto;
-    }
-
-    .hero-texto h2 {
-        font-size: 2.3em;
-        line-height: 1.25;
-        white-space: normal;
-        word-break: normal;
-        overflow-wrap: normal;
-    }
-}
-
-@media (max-width: 1100px) {
+    /* --- GERAL: CABEÇALHO E NAVEGAÇÃO --- */
 
     header {
         padding: 20px 0 10px;
     }
 
     .header-content {
+        /* 🔑 CRÍTICO: Centraliza a navegação e o logo verticalmente */
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -593,32 +565,113 @@ footer {
 
     .header-logo-img {
         height: 52px;
-        margin: 0 auto 10px;
-    }
-
-    .hero-conteudo {
-        flex-direction: column;
-        padding: 0 20px;
-        padding-left: 0;
-        text-align: center;
+        margin-right: 10px; /* Mantém o espaçamento com o texto */
     }
 
     nav ul {
         justify-content: center;
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Permite que os itens do menu quebrem em duas linhas */
+    }
+    
+    /* --- SEÇÃO HERO --- */
+
+    .hero-conteudo {
+        /* 🔑 CRÍTICO: Empilha os elementos (logo/imagem e texto) */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        /* 🔑 CRÍTICO: Adiciona o padding horizontal para evitar que o texto corte */
+        padding: 0 24px;
+        /* REMOVE: padding-left: 0; que estava desalinhando */
+        box-sizing: border-box;
+        gap: 40px; /* Ajusta o gap ao empilhar */
+    }
+    
+    /* Logo / Imagem da Coluna Direita */
+    .hero-imagem {
+        order: -1; /* Coloca a logo/imagem acima do texto */
+        width: 100%;
+        max-width: 200px; /* Limita o tamanho do logo para não ser exagerado */
+        margin-bottom: 24px;
+    }
+    
+    .hero-texto {
+        width: 100%;
+        max-width: 720px;
+        margin: 0 auto;
+        text-align: center;
     }
 
+    .hero-texto h2 {
+        font-size: 2.3em;
+        line-height: 1.25;
+        /* Garante que o texto quebre em vez de vazar */
+        white-space: normal; 
+        word-break: break-word;
+    }
+    
+    /* Botões CTA */
+    .btn-cta {
+        display: block; /* 🔑 CRÍTICO: Fazem os botões ocuparem a largura total e empilharem */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* --- CARROSSEL --- */
+    
     .carousel-wrapper {
-        overflow: visible !important;
-    }
-
-    .carousel-clipper {
-        overflow-x: hidden;
-        overflow-y: visible;
+        padding: 0 5px; /* Reduz o padding lateral do wrapper */
     }
 
     .promocao-card {
-        width: calc(100vw - 40px);
-        max-width: 340px;
+        /* Ocupa a largura total da tela, subtraindo o padding */
+        min-width: calc(100vw - 48px); 
+        max-width: 380px;
+    }
+    
+    /* Ajusta as setas para ficarem na borda da tela */
+    .left-arrow {
+        left: 0;
+        transform: translate(0, -50%);
+    }
+    
+    .right-arrow {
+        right: 0;
+        transform: translate(0, -50%);
+    }
+    
+    /* --- SEÇÃO CINEMA --- */
+
+    .cinema-iframe-full-width {
+        height: 400px;
+    }
+
+    /* --- SOBRE NÓS --- */
+    
+    .sobre-conteudo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 24px;
+    }
+
+    .sobre-texto, .sobre-localizacao {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .sobre-texto h3 {
+        text-align: center;
+    }
+    
+    .sobre-texto p {
+        text-align: justify; /* Mantém o texto justificado, mas centraliza o bloco */
+    }
+    
+    .missao-valores, .localizacao-info-block {
+        text-align: left; /* Mantém o conteúdo interno do card alinhado à esquerda */
     }
 }
