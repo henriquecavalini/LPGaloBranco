@@ -541,10 +541,12 @@ footer {
 /* --- RESPONSIVIDADE PARA TABLET E MOBILE --- */
 /* (MAX-WIDTH: 1024px cobre a maioria dos tablets e celulares) */
 /* ========================================================= */
+/* ========================================================= */
+/* --- RESPONSIVIDADE FINAL (LOGO CENTRALIZADA + CARDS OK) --- */
+/* ========================================================= */
 @media (max-width: 1024px) {
 
-    /* --- GERAL: CABEÇALHO E NAVEGAÇÃO --- */
-
+    /* --- 1. CABEÇALHO --- */
     header {
         padding: 15px 0;
     }
@@ -553,125 +555,120 @@ footer {
         flex-direction: column;
         gap: 15px;
     }
-
-    .header-logo-img {
-        height: 45px; /* Logo um pouco menor no mobile */
-    }
-
-    .header-logo-img {
-        height: 52px;
-        margin-right: 10px; /* Mantém o espaçamento com o texto */
-    }
-
-    nav ul {
-        justify-content: center;
-        flex-wrap: wrap; /* Permite que os itens do menu quebrem em duas linhas */
-    }
     
-    /* --- SEÇÃO HERO --- */
+    /* Centraliza a logo do cabeçalho */
+    .logo-imagem {
+        justify-content: center;
+        width: 100%;
+    }
 
+    /* --- 2. HERO (LOGO EM CIMA E CENTRALIZADO) --- */
     .hero-conteudo {
-        flex-direction: column;
+        /* Empilha um em cima do outro */
+        flex-direction: column; 
+        /* Centraliza o alinhamento dos itens */
+        align-items: center; 
+        justify-content: center;
         text-align: center;
-        padding: 0 20px; /* Garante que nada encoste na borda da tela */
+        /* Espaço interno para não grudar na borda */
+        padding: 40px 20px; 
         gap: 30px;
     }
-    
-    /* Logo / Imagem da Coluna Direita */
+
+    /* Configuração da Imagem/Logo no Hero */
     .hero-imagem {
-        width: 80%; /* Logo/Imagem Hero não precisa ser gigante */
-        max-width: 250px;
-        margin: 0 auto 20px auto;
-        order: -1; /* Imagem fica em cima */
+        /* Joga a imagem para cima do texto */
+        order: -1; 
+        width: 100%;
+        max-width: 200px; /* Tamanho controlado */
+        
+        /* 🔑 O SEGREDO DO CENTRO: Margem automática nas laterais */
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        
+        /* Garante que o conteúdo interno (img) também centralize */
+        display: flex;
+        justify-content: center;
     }
-    
+
+    /* Configuração do Texto Hero */
     .hero-texto {
         width: 100%;
-        margin: 0 auto;
+        /* Centraliza o bloco de texto */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
+
     .hero-texto h2 {
-        font-size: 1.8em; /* Reduzido de 2.3em/3em para 1.8em */
+        font-size: 1.8em; /* Tamanho bom para celular */
         line-height: 1.3;
         margin-bottom: 15px;
+        /* Força o texto a centralizar mesmo se houver CSS conflitante */
+        text-align: center !important; 
     }
 
     .hero-texto h3 {
-        font-size: 1.2em; /* Reduzido o subtítulo também */
+        font-size: 1.2em;
         margin-bottom: 20px;
+        text-align: center !important;
     }
     
-    /* Botões CTA */
+    /* Centraliza os botões */
     .btn-cta {
-        display: block; 
-        width: 100%; /* Botão ocupa largura total */
-        box-sizing: border-box; /* Garante que o padding não estoure a largura */
-        margin: 0 0 15px 0; /* Margem apenas embaixo */
-    }
-    
-    /* --- CARROSSEL --- */
-    
-    .carousel-wrapper {
-        /* Removemos o padding lateral do wrapper para usar no container interno */
-        padding: 0; 
+        display: block;
+        width: 100%;
+        max-width: 350px; /* Não deixa o botão ficar largo demais em tablets */
+        margin: 0 auto 15px auto; /* Centraliza o botão */
     }
 
-    .promocao-card {
-        /* 🛠️ CORREÇÃO 3: Largura do card */
-        /* Usamos 85vw (85% da tela) para que apareça um pedacinho do próximo card */
-        /* Isso indica ao usuário que é possível arrastar para o lado */
-        min-width: 85vw; 
-        max-width: 350px; /* Trava num tamanho máximo */
-        
-        /* Garante que a sombra apareça inteira */
-        margin: 0 auto; 
+    /* --- 3. CARROSSEL (SEM CORTAR PONTINHAS) --- */
+    
+    .carousel-wrapper {
+        padding: 0;
+        /* Garante que o wrapper ocupe a largura total para centralizar */
+        width: 100%; 
+        overflow: hidden;
     }
 
     .promocao-items-container {
-        /* 🛠️ CORREÇÃO 2: Espaço para a sombra não ser cortada */
-        padding: 20px 20px; /* 20px em cima/baixo, 20px nas laterais */
+        /* 🔑 A SOLUÇÃO DO CORTE: */
+        /* Adiciona 30px de espaço em cima, baixo e lados DENTRO do container */
+        /* Isso dá espaço para a sombra (box-shadow) existir sem ser cortada */
+        padding: 30px 20px; 
     }
-    
-    /* Ajusta as setas para ficarem na borda da tela */
-    .left-arrow {
-        left: 0;
-        transform: translate(0, -50%);
-    }
-    
-    .right-arrow {
-        right: 0;
-        transform: translate(0, -50%);
-    }
-    
-    /* --- SEÇÃO CINEMA --- */
 
+    .promocao-card {
+        /* Largura levemente menor para garantir que caiba com folga */
+        min-width: 80vw; 
+        max-width: 320px;
+        
+        /* Centraliza o card no seu espaço */
+        margin-left: auto;
+        margin-right: auto;
+        
+        /* Garante que a sombra não seja gigantesca */
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
+    }
+
+    /* --- 4. OUTROS AJUSTES --- */
     .cinema-iframe-full-width {
-        height: 350px;
+        height: 300px;
     }
 
-    /* --- SOBRE NÓS --- */
-    
     .sobre-conteudo {
         flex-direction: column;
         padding: 0 20px;
     }
-
+    
     .sobre-texto, .sobre-localizacao {
         width: 100%;
-    }
-    
-    .sobre-texto h3 {
         text-align: center;
     }
     
-    .sobre-texto p {
-        text-align: justify; /* Mantém o texto justificado, mas centraliza o bloco */
-    }
-    
-    .missao-valores, .localizacao-info-block {
-        text-align: left; /* Mantém o conteúdo interno do card alinhado à esquerda */
-    }
-
-    .secao h2, .secao h3 {
-        font-size: 1.8em; 
+    /* Centraliza títulos das seções */
+    .secao h2.title-institucional, .secao h3 {
+        text-align: center;
     }
 }
