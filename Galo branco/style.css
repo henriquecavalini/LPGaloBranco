@@ -541,16 +541,21 @@ footer {
 @media (min-width: 768px) and (max-width: 1024px) {
     .hero-conteudo {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 25px;
     }
 
-    .hero-texto,
-    .hero-imagem {
+    .hero-imagem,
+    .hero-texto {
         width: 100%;
+        max-width: 600px;
     }
 
-    .hero-imagem {
-        margin-bottom: 30px;
+    .hero-texto h2 {
+        font-size: 2.2em;
+        line-height: 1.2;
+        word-break: keep-all; /* 🔑 impede quebra feia */
     }
 }
 
