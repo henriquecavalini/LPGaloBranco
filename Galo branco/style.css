@@ -539,33 +539,32 @@ footer {
 
 /* --- RESPONSIVIDADE --- */
 @media (min-width: 768px) and (max-width: 1200px) {
-
+    
+    /* Container com mais respiro lateral */
     .container {
-        width: 95%; /* Usa mais espaço da tela */
+        width: 95%;
     }
 
+    /* HEADER: Garante que o menu principal seja legível */
     .header-content {
         flex-wrap: wrap;
         justify-content: center;
     }
     
-    nav ul {
-        gap: 15px; 
-    }
+    /* HERO SECTION: Mantém as colunas, mas otimiza o espaço */
     .hero-conteudo {
-        /* Garante que o conteúdo não ultrapasse o container */
-        overflow: hidden; 
-        padding: 0 20px; /* Adiciona um padding interno para o conteúdo respirar */
+        flex-direction: row; 
+        gap: 20px;
+        align-items: flex-start; /* Alinha o conteúdo ao topo da seção */
     }
     
     .hero-texto {
-        /* 🔑 CRÍTICO: Reduz a largura da coluna de texto no tablet */
-        width: 55%; 
+        width: 55%; /* Reduz a largura para evitar corte */
+        text-align: left; /* Mantém o alinhamento de texto à esquerda */
     }
 
     .hero-texto h2 {
-        /* 🔑 CRÍTICO: Reduz o tamanho da fonte para caber na largura menor */
-        font-size: 2.5em; 
+        font-size: 2.5em; /* Reduz o título principal */
     }
     
     .hero-texto h3 {
@@ -573,26 +572,85 @@ footer {
     }
 
     .hero-imagem {
-        width: 35%; /* O card de Instagram menor */
+        width: 35%; 
     }
     
-    /* 4. CARROSSEL DE OFERTAS: Garante que caibam 2 ou 3 cards por vez */
-    .promocao-card {
-        min-width: 300px; /* Reduz a largura mínima dos cards */
-    }
-    
-    /* 5. PÁGINA SOBRE NÓS: Garante que as colunas fiquem lado a lado */
+    /* SOBRE NÓS: Colunas lado a lado, 50% cada */
     .sobre-conteudo {
-        flex-direction: row; /* Garante que o texto e o mapa fiquem lado a lado */
+        flex-direction: row;
         gap: 30px;
     }
     
     .sobre-texto, .sobre-localizacao {
-        width: 50%; /* Divide o espaço igualmente */
+        width: 50%;
     }
     
-    .imagem-institucional {
-        height: 300px; /* Limita a altura da imagem na coluna de texto */
-        object-fit: cover;
+    /* CARDS: Ajusta a largura mínima para caber mais de um, se possível */
+    .promocao-card {
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .header-content, .hero-conteudo, .sobre-conteudo {
+        flex-direction: column; /* 🔑 EMPILHA: Transforma em uma única coluna */
+        align-items: center;    /* Centraliza os blocos (eixo horizontal) */
+        text-align: center;     /* Centraliza o texto dentro dos blocos */
+    }
+    
+    /* Garante que todos os elementos ocupem a largura total, com respiro */
+    .hero-texto, .hero-imagem, .sobre-texto, .sobre-localizacao {
+        width: 100%;
+        padding: 0 20px; /* 🔑 CRÍTICO: Espaçamento interno para o conteúdo não cortar */
+        box-sizing: border-box; /* Garante que o padding não cause vazamento */
+    }
+    
+    /* HERO SECTION: Logo acima do texto */
+    .hero-imagem {
+        order: -1; 
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* Centraliza a imagem da logo no mobile */
+    .header-logo-img {
+        margin: 0 auto 10px auto; 
+    }
+    
+    /* Títulos menores para caberem na tela */
+    .hero-texto h2 {
+        font-size: 2em; 
+        line-height: 1.2;
+    }
+    
+    .hero-texto h3 {
+        font-size: 1.3em;
+    }
+
+    /* Botões: Ocupam 100% da largura em mobile */
+    .btn-cta {
+        display: block; 
+        margin-right: 0;
+        margin-left: 0;
+    }
+    
+    /* Remove a margem direita do botão vermelho (WhatsApp) para que ele ocupe 100% */
+    .btn-vermelho {
+        margin-right: 0;
+    }
+
+    /* Carrossel: Card ocupa quase a largura inteira */
+    .promocao-card {
+        min-width: 85vw; /* 85% da largura da tela */
+    }
+
+    .cinema-iframe-full-width {
+        height: 350px; 
+    }
+
+    /* SOBRE NÓS: Reduz o tamanho da fonte */
+    .sobre-loja h2.title-institucional {
+        font-size: 2em;
     }
 }
