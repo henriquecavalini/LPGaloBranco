@@ -536,139 +536,119 @@ footer {
     font-size: 0.9em;
     color: #666;
 }
-
 /* ========================================================= */
-/* --- RESPONSIVIDADE PARA TABLET E MOBILE --- */
-/* (MAX-WIDTH: 1024px cobre a maioria dos tablets e celulares) */
-/* ========================================================= */
-/* ========================================================= */
-/* --- RESPONSIVIDADE FINAL (LOGO CENTRALIZADA + CARDS OK) --- */
+/* --- RESPONSIVIDADE FORÇADA (MOBILE E TABLET) --- */
 /* ========================================================= */
 @media (max-width: 1024px) {
 
     /* --- 1. CABEÇALHO --- */
-    header {
-        padding: 15px 0;
-    }
-
     .header-content {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: column !important;
+        gap: 15px !important;
+        text-align: center !important;
     }
-    
-    /* Centraliza a logo do cabeçalho */
+
+    /* Força a logo a ficar centralizada */
     .logo-imagem {
-        justify-content: center;
-        width: 100%;
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
     }
 
-    /* --- 2. HERO (LOGO EM CIMA E CENTRALIZADO) --- */
+    /* --- 2. HERO (LOGO EM CIMA + TEXTO CENTRALIZADO) --- */
     .hero-conteudo {
-        /* Empilha um em cima do outro */
-        flex-direction: column; 
-        /* Centraliza o alinhamento dos itens */
-        align-items: center; 
-        justify-content: center;
-        text-align: center;
-        /* Espaço interno para não grudar na borda */
-        padding: 40px 20px; 
-        gap: 30px;
+        /* Força coluna única */
+        flex-direction: column !important;
+        /* Remove qualquer gap gigante */
+        gap: 20px !important; 
+        /* Centraliza tudo */
+        align-items: center !important;
+        text-align: center !important;
+        /* Adiciona respiro lateral OBRIGATÓRIO */
+        padding: 40px 20px !important; 
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
-    /* Configuração da Imagem/Logo no Hero */
+    /* Logo/Imagem do Hero */
     .hero-imagem {
-        /* Joga a imagem para cima do texto */
-        order: -1; 
-        width: 100%;
-        max-width: 200px; /* Tamanho controlado */
-        
-        /* 🔑 O SEGREDO DO CENTRO: Margem automática nas laterais */
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px;
-        
-        /* Garante que o conteúdo interno (img) também centralize */
-        display: flex;
-        justify-content: center;
+        /* Joga para cima */
+        order: -1 !important; 
+        width: 100% !important;
+        max-width: 220px !important;
+        /* Margens automáticas centralizam blocos */
+        margin: 0 auto 20px auto !important; 
+        padding: 0 !important;
     }
 
-    /* Configuração do Texto Hero */
+    /* Texto do Hero */
     .hero-texto {
-        width: 100%;
-        /* Centraliza o bloco de texto */
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
+        width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        display: block !important;
     }
 
+    /* Título (H2) */
     .hero-texto h2 {
-        font-size: 1.8em; /* Tamanho bom para celular */
-        line-height: 1.3;
-        margin-bottom: 15px;
-        /* Força o texto a centralizar mesmo se houver CSS conflitante */
-        text-align: center !important; 
+        font-size: 1.8em !important; /* Força fonte menor */
+        line-height: 1.3 !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
     }
 
     .hero-texto h3 {
-        font-size: 1.2em;
-        margin-bottom: 20px;
+        font-size: 1.2em !important;
         text-align: center !important;
     }
-    
-    /* Centraliza os botões */
+
+    /* Botões */
     .btn-cta {
-        display: block;
-        width: 100%;
-        max-width: 350px; /* Não deixa o botão ficar largo demais em tablets */
-        margin: 0 auto 15px auto; /* Centraliza o botão */
+        display: block !important;
+        width: 100% !important;
+        max-width: 320px !important; /* Limita largura */
+        margin: 0 auto 15px auto !important; /* Centraliza */
     }
 
-    /* --- 3. CARROSSEL (SEM CORTAR PONTINHAS) --- */
+    /* --- 3. CARROSSEL DE PROMOÇÕES (FIM DOS CORTES) --- */
     
     .carousel-wrapper {
-        padding: 0;
-        /* Garante que o wrapper ocupe a largura total para centralizar */
-        width: 100%; 
-        overflow: hidden;
+        width: 100% !important;
+        overflow: hidden !important;
+        padding: 10px 0 !important;
     }
 
     .promocao-items-container {
-        /* 🔑 A SOLUÇÃO DO CORTE: */
-        /* Adiciona 30px de espaço em cima, baixo e lados DENTRO do container */
-        /* Isso dá espaço para a sombra (box-shadow) existir sem ser cortada */
-        padding: 30px 20px; 
+        /* ESPAÇAMENTO EXTRA PARA A SOMBRA NÃO CORTAR */
+        padding: 20px 20px 30px 20px !important; 
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        /* Largura levemente menor para garantir que caiba com folga */
-        min-width: 80vw; 
-        max-width: 320px;
+        /* Tamanho fixo relativo à tela */
+        min-width: 80vw !important; 
+        max-width: 320px !important;
         
-        /* Centraliza o card no seu espaço */
-        margin-left: auto;
-        margin-right: auto;
+        /* Margem automática para centralizar */
+        margin-left: auto !important;
+        margin-right: auto !important;
         
-        /* Garante que a sombra não seja gigantesca */
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); 
+        /* Sombra contida */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
     }
-
-    /* --- 4. OUTROS AJUSTES --- */
-    .cinema-iframe-full-width {
-        height: 300px;
+    
+    /* --- 4. TEXTOS GERAIS --- */
+    .secao h2, .secao h3 {
+        text-align: center !important;
+        font-size: 1.8em !important;
     }
-
+    
     .sobre-conteudo {
-        flex-direction: column;
-        padding: 0 20px;
+        flex-direction: column !important;
+        padding: 0 20px !important;
     }
     
     .sobre-texto, .sobre-localizacao {
-        width: 100%;
-        text-align: center;
-    }
-    
-    /* Centraliza títulos das seções */
-    .secao h2.title-institucional, .secao h3 {
-        text-align: center;
+        width: 100% !important;
     }
 }
