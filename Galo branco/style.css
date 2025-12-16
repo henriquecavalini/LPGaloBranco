@@ -19,7 +19,7 @@ body {
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto; /* 🔑 CRÍTICO: Garante que o container esteja CENTRALIZADO na página */
 }
 
 h2, h3, h4 {
@@ -86,7 +86,7 @@ nav i {
     display: flex;
     align-items: center;
     gap: 60px;
-    justify-content: space-between;
+    justify-content: center;
     padding-left: 200px;
 }
 
@@ -95,9 +95,9 @@ nav i {
     /* Alinha os itens verticalmente ao centro (ideal para logo e texto) */
     align-items: center; 
     /* Remove a centralização de texto global para evitar conflitos */
-    text-align: left; 
+    text-align: center; 
     /* Ajuste de margem se necessário */
-    padding: 15px; 
+    margin: 0 auto;
 }
 
 .hero-texto h2 {
