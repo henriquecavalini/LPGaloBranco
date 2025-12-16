@@ -92,8 +92,6 @@ nav i {
 
 .hero-texto {
     display: flex;
-    /* Alinha os itens verticalmente ao centro (ideal para logo e texto) */
-    align-items: center; 
     /* Remove a centralização de texto global para evitar conflitos */
     text-align: center; 
     /* Ajuste de margem se necessário */
