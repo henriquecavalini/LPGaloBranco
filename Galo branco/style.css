@@ -574,70 +574,90 @@ footer {
 }
 
 @media (max-width: 767px) {
-    
-    .header-content, .hero-conteudo, .sobre-conteudo {
-        flex-direction: column; /* 🔑 EMPILHA: Transforma em uma única coluna */
-        align-items: center;    /* Centraliza os blocos (eixo horizontal) */
-        text-align: center;     /* Centraliza o texto dentro dos blocos */
+
+    /* ===== HEADER ===== */
+    header {
+        padding: 20px 0 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
         padding: 0 20px;
     }
-    
-    /* Garante que todos os elementos ocupem a largura total, com respiro */
-    .hero-texto, .hero-imagem, .sobre-texto, .sobre-localizacao {
-        width: 100%;
-        padding: 0;
-        box-sizing: border-box; /* Garante que o padding não cause vazamento */
+
+    .logo-imagem {
+        justify-content: center;
     }
-    
-    /* HERO SECTION: Logo acima do texto */
-    .hero-imagem {
-        order: -1; 
-        margin-bottom: 30px;
+
+    .header-logo-img {
+        height: 52px;
+        margin: 0 auto 10px;
+    }
+
+    /* ===== HERO ===== */
+    .hero-conteudo {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        padding-left: 0; /* remove o padding do desktop */
         text-align: center;
     }
 
-    /* Centraliza a imagem da logo no mobile */
-    .header-logo-img {
-        margin: 0 auto 10px auto; 
+    .hero-imagem {
+        order: -1;
+        margin-bottom: 30px;
+        width: 100%;
+        text-align: center;
     }
-    
-    /* Títulos menores para caberem na tela */
+
+    .hero-texto {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .hero-texto h2 {
-        font-size: 2em; 
+        font-size: 2em;
         line-height: 1.2;
     }
-    
+
     .hero-texto h3 {
         font-size: 1.3em;
     }
 
-    /* Botões: Ocupam 100% da largura em mobile */
+    /* ===== BOTÕES ===== */
     .btn-cta {
-        display: block; 
-        margin-right: 0;
-        margin-left: 0;
+        display: block;
+        width: 100%;
+        margin: 0 0 12px 0;
     }
-    
-    /* Remove a margem direita do botão vermelho (WhatsApp) para que ele ocupe 100% */
+
     .btn-vermelho {
         margin-right: 0;
     }
 
-    /* Carrossel: Card ocupa quase a largura inteira */
+    /* ===== CARROSSEL ===== */
+    .carousel-wrapper {
+        overflow: visible; /* 🔑 evita cortar sombra */
+    }
+
+    .carousel-clipper {
+        overflow: hidden;
+    }
+
     .promocao-card {
-        min-width: 85vw; /* 85% da largura da tela */
+        width: clamp(280px, 88vw, 340px);
     }
 
+    /* ===== CINEMA ===== */
     .cinema-iframe-full-width {
-        height: 350px; 
+        height: 350px;
     }
 
-    /* SOBRE NÓS: Reduz o tamanho da fonte */
+    /* ===== SOBRE ===== */
     .sobre-loja h2.title-institucional {
         font-size: 2em;
     }
-
-    .promocao-card {
-    width: clamp(260px, 85vw, 320px);
-}
 }
