@@ -541,6 +541,10 @@ footer {
 /* ========================================================= */
 @media (max-width: 1024px) {
 
+    body {
+        border: 10px solid red !important;
+    }
+
     /* --- 1. CABEÇALHO --- */
     .header-content {
         flex-direction: column !important;
