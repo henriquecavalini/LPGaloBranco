@@ -554,15 +554,24 @@ footer {
     nav ul {
         gap: 15px; 
     }
-
-    /* 3. HERO SECTION: Mantém as colunas, mas mais estreitas */
     .hero-conteudo {
-        flex-direction: row; /* Garante que fiquem lado a lado */
-        gap: 20px;
+        /* Garante que o conteúdo não ultrapasse o container */
+        overflow: hidden; 
+        padding: 0 20px; /* Adiciona um padding interno para o conteúdo respirar */
     }
     
     .hero-texto {
-        width: 60%; 
+        /* 🔑 CRÍTICO: Reduz a largura da coluna de texto no tablet */
+        width: 55%; 
+    }
+
+    .hero-texto h2 {
+        /* 🔑 CRÍTICO: Reduz o tamanho da fonte para caber na largura menor */
+        font-size: 2.5em; 
+    }
+    
+    .hero-texto h3 {
+        font-size: 1.5em; 
     }
 
     .hero-imagem {
