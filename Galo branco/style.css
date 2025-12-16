@@ -539,119 +539,101 @@ footer {
 /* ========================================================= */
 /* --- RESPONSIVIDADE FORÇADA (MOBILE E TABLET) --- */
 /* ========================================================= */
+/* ========================================================= */
+/* --- RESPONSIVIDADE FINAL (CÓDIGO CORRIGIDO) --- */
+/* ========================================================= */
 @media (max-width: 1024px) {
-
-    body {
-        border: 10px solid red !important;
-    }
 
     /* --- 1. CABEÇALHO --- */
     .header-content {
         flex-direction: column !important;
-        gap: 15px !important;
         text-align: center !important;
+        gap: 15px !important;
     }
 
-    /* Força a logo a ficar centralizada */
-    .logo-imagem {
-        width: 100% !important;
-        justify-content: center !important;
-        display: flex !important;
-    }
-
-    /* --- 2. HERO (LOGO EM CIMA + TEXTO CENTRALIZADO) --- */
+    /* --- 2. HERO (Centralização Forçada) --- */
     .hero-conteudo {
-        /* Força coluna única */
+        /* Coloca um bloco em cima do outro */
         flex-direction: column !important;
-        /* Remove qualquer gap gigante */
-        gap: 20px !important; 
         /* Centraliza tudo */
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
-        /* Adiciona respiro lateral OBRIGATÓRIO */
-        padding: 40px 20px !important; 
+        /* Espaço nas laterais para texto não colar na borda */
+        padding: 40px 20px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Logo/Imagem do Hero */
+    /* BLOCO DA IMAGEM */
     .hero-imagem {
-        /* Joga para cima */
+        /* Joga a imagem para o topo (acima do texto) */
         order: -1 !important; 
         width: 100% !important;
-        max-width: 220px !important;
-        /* Margens automáticas centralizam blocos */
-        margin: 0 auto 20px auto !important; 
-        padding: 0 !important;
+        margin-bottom: 20px !important;
+        /* Garante centralização */
+        display: flex !important;
+        justify-content: center !important;
     }
 
-    /* Texto do Hero */
-    .hero-texto {
-        width: 100% !important;
-        margin: 0 auto !important;
-        text-align: center !important;
+    /* A IMAGEM EM SI */
+    .logo-hero {
+        max-width: 250px !important; /* Tamanho controlado no celular */
+        height: auto !important;
         display: block !important;
     }
 
-    /* Título (H2) */
-    .hero-texto h2 {
-        font-size: 1.8em !important; /* Força fonte menor */
-        line-height: 1.3 !important;
+    /* BLOCO DO TEXTO */
+    .hero-texto {
+        width: 100% !important;
+        max-width: 600px !important; /* Evita linhas muito longas */
+        margin: 0 auto !important;
         text-align: center !important;
+    }
+
+    .hero-texto h2 {
+        font-size: 1.8em !important; /* Fonte menor */
+        line-height: 1.3 !important;
         margin-bottom: 15px !important;
     }
-
-    .hero-texto h3 {
-        font-size: 1.2em !important;
-        text-align: center !important;
+    
+    .subtitle {
+        font-size: 1em !important;
+        margin-bottom: 25px !important;
     }
 
-    /* Botões */
+    /* BOTÕES */
     .btn-cta {
         display: block !important;
         width: 100% !important;
-        max-width: 320px !important; /* Limita largura */
+        max-width: 320px !important;
         margin: 0 auto 15px auto !important; /* Centraliza */
     }
 
-    /* --- 3. CARROSSEL DE PROMOÇÕES (FIM DOS CORTES) --- */
-    
+    /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
+        padding: 0 !important;
         overflow: hidden !important;
-        padding: 10px 0 !important;
     }
 
     .promocao-items-container {
-        /* ESPAÇAMENTO EXTRA PARA A SOMBRA NÃO CORTAR */
-        padding: 20px 20px 30px 20px !important; 
-        box-sizing: border-box !important;
+        /* Espaço interno para a sombra aparecer inteira */
+        padding: 20px 20px 40px 20px !important; 
     }
 
     .promocao-card {
-        /* Tamanho fixo relativo à tela */
-        min-width: 80vw !important; 
+        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
         max-width: 320px !important;
-        
-        /* Margem automática para centralizar */
-        margin-left: auto !important;
-        margin-right: auto !important;
-        
-        /* Sombra contida */
+        margin: 0 auto !important;
         box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
     }
     
-    /* --- 4. TEXTOS GERAIS --- */
-    .secao h2, .secao h3 {
-        text-align: center !important;
-        font-size: 1.8em !important;
-    }
-    
+    /* GERAL */
     .sobre-conteudo {
         flex-direction: column !important;
         padding: 0 20px !important;
     }
-    
     .sobre-texto, .sobre-localizacao {
         width: 100% !important;
     }
