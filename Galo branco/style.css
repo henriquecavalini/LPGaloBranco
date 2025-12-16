@@ -575,18 +575,16 @@ footer {
 
 @media (max-width: 900px) {
 
-    /* ===== HEADER ===== */
     header {
         padding: 20px 0 10px;
     }
 
     .header-content {
         flex-direction: column;
-        align-items: center;
-        gap: 8px;
-        text-align: center;
-        padding: 0 20px;
         justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
     }
 
     .logo-imagem {
@@ -599,50 +597,15 @@ footer {
         margin: 0 auto 10px;
     }
 
-    /* ===== HERO ===== */
     .hero-conteudo {
         flex-direction: column;
-        align-items: center;
         padding: 0 20px;
-        padding-left: 0; /* remove o padding do desktop */
+        padding-left: 0;
         text-align: center;
     }
 
-    .hero-imagem {
-        order: -1;
-        margin-bottom: 30px;
-        width: 100%;
-        text-align: center;
-    }
-
-    .hero-texto {
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .hero-texto h2 {
-        font-size: 2em;
-        line-height: 1.2;
-    }
-
-    .hero-texto h3 {
-        font-size: 1.3em;
-    }
-
-    /* ===== BOTÕES ===== */
-    .btn-cta {
-        display: block;
-        width: 100%;
-        margin: 0 0 12px 0;
-    }
-
-    .btn-vermelho {
-        margin-right: 0;
-    }
-
-    /* ===== CARROSSEL ===== */
     .carousel-wrapper {
-        overflow: visible !important; /* 🔑 evita cortar sombra */
+        overflow: visible !important;
     }
 
     .carousel-clipper {
@@ -651,17 +614,7 @@ footer {
     }
 
     .promocao-card {
-        width: clamp(280px, 88vw, 340px);
-         margin: 10px 0;
-    }
-
-    /* ===== CINEMA ===== */
-    .cinema-iframe-full-width {
-        height: 350px;
-    }
-
-    /* ===== SOBRE ===== */
-    .sobre-loja h2.title-institucional {
-        font-size: 2em;
+        width: calc(100vw - 40px);
+        max-width: 340px;
     }
 }
