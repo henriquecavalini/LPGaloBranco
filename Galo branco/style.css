@@ -545,49 +545,47 @@ footer {
     .container {
         width: 95%; /* Usa mais espaço da tela */
     }
-    
-    .header-content, .hero-conteudo {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-left: 20px;
-    }
-    
-    .hero-texto, .hero-imagem {
-        width: 100%;
-        padding: 0;
-    }
-    
-    .hero-imagem {
-        order: -1;
-        margin-bottom: 30px;
-    }
-    
-    .promocao-card-container {
-        flex-direction: column;
-    }
-    
-    .btn-cta {
-        margin-right: 0;
-        display: block;
-    }
-    
-    .logo {
-        margin-bottom: 15px;
-    }
-    
-    nav ul {
+
+    .header-content {
         flex-wrap: wrap;
         justify-content: center;
     }
+    
+    nav ul {
+        gap: 15px; 
+    }
+
+    /* 3. HERO SECTION: Mantém as colunas, mas mais estreitas */
+    .hero-conteudo {
+        flex-direction: row; /* Garante que fiquem lado a lado */
+        gap: 20px;
+    }
+    
+    .hero-texto {
+        width: 60%; 
+    }
+
+    .hero-imagem {
+        width: 35%; /* O card de Instagram menor */
+    }
+    
+    /* 4. CARROSSEL DE OFERTAS: Garante que caibam 2 ou 3 cards por vez */
     .promocao-card {
-        min-width: 80%; /* Mostra 1 card grande no celular */
+        min-width: 300px; /* Reduz a largura mínima dos cards */
     }
     
-    .left-arrow {
-        left: 0px;
+    /* 5. PÁGINA SOBRE NÓS: Garante que as colunas fiquem lado a lado */
+    .sobre-conteudo {
+        flex-direction: row; /* Garante que o texto e o mapa fiquem lado a lado */
+        gap: 30px;
     }
     
-    .right-arrow {
-        right: 0px;
+    .sobre-texto, .sobre-localizacao {
+        width: 50%; /* Divide o espaço igualmente */
+    }
+    
+    .imagem-institucional {
+        height: 300px; /* Limita a altura da imagem na coluna de texto */
+        object-fit: cover;
     }
 }
