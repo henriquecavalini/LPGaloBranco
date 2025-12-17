@@ -642,24 +642,8 @@ footer {
     }
 
     .promocao-items-container {
-        display: flex !important;
-        
-        /* 🔑 A SOLUÇÃO: Aumentei muito o padding (respiro) */
-        /* 40px em cima e embaixo garante que a sombra não corte */
-        padding: 40px 30px !important; 
-        
-        /* Permite rolar para o lado */
-        overflow-x: auto !important; 
-        
-        /* Evita barra de rolagem vertical feia */
-        overflow-y: hidden !important; 
-        
-        /* Comportamento suave ao rolar */
-        scroll-behavior: smooth !important;
-        
-        /* Garante que o container pegue a largura total */
-        width: 100% !important;
-        box-sizing: border-box !important;
+        /* Espaço interno para a sombra aparecer inteira */
+        padding: 20px 20px 40px 20px !important; 
     }
 
     .promocao-card {
