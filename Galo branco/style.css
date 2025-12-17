@@ -637,44 +637,46 @@ footer {
     /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
-        
-        /* 🔑 O PULO DO GATO: */
-        /* Damos espaço no wrapper também para ele não cortar o container */
-        padding: 20px 0 !important; 
-        
+        /* 1. Removemos o padding do wrapper que deixava tudo gigante */
+        padding: 0 !important; 
         overflow: hidden !important;
     }
 
     .promocao-items-container {
         display: flex !important;
         
-        /* Espaço interno generoso: 40px embaixo (3º número) deve bastar */
-        /* Se ainda cortar, aumente o 40px para 60px */
-        padding: 20px 20px 40px 20px !important; 
+        /* 2. O SEGREDO DO TAMANHO: */
+        /* 10px em cima (fino) */
+        /* 20px nos lados */
+        /* 30px embaixo (só o necessário para a sombra não cortar) */
+        padding: 10px 20px 30px 20px !important; 
         
-        /* Rolagem lateral */
         overflow-x: auto !important;
-        
-        /* 🔑 IMPORTANTE: Permite que a sombra "vaze" um pouco na vertical */
-        overflow-y: visible !important; 
-        
+        overflow-y: hidden !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important;
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        
-        /* Sombra forte para testar */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
-        
-        /* Garante que o card não fique transparente */
+        /* Cor e Texto */
         background-color: #444444 !important; 
         color: white !important;
+        
+        /* Tamanho */
+        min-width: 80vw !important;
+        max-width: 300px !important;
+        margin: 0 10px !important; /* Reduzi o espaço entre cards para 10px */
+        
+        /* Sombra Controlada */
+        box-shadow: 0 10px 15px rgba(0,0,0,0.4) !important;
+        
         border-radius: 10px !important;
+        flex-shrink: 0 !important;
     }
+    
+    /* Remove margem extra das pontas */
+    .promocao-card:first-child { margin-left: 0 !important; }
+    .promocao-card:last-child { margin-right: 0 !important; }
     
     /* GERAL */
     .sobre-conteudo {
