@@ -642,15 +642,35 @@ footer {
     }
 
     .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 40px 20px !important; 
+        display: flex !important;
+        
+        /* 1. Mudei aqui: 10px em cima, 20px lados, 40px EMBAIXO */
+        /* Esses 40px salvam a sombra */
+        padding: 10px 20px 40px 20px !important; 
+        
+        width: 100% !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important; /* Deixa a sombra vazar se precisar */
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
+        /* 2. Cor forçada (garantia) */
+        background: #444444 !important;
+        color: white !important;
+
+        /* 3. Tamanho e Margem */
+        min-width: 80vw !important;
         max-width: 320px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        
+        /* Espaço entre um card e outro (importante para não grudar) */
+        margin: 0 10px !important; 
+        
+        /* Sombra */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+        
+        border-radius: 10px !important;
+        flex-shrink: 0 !important;
     }
     
     /* GERAL */
