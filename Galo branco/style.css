@@ -712,86 +712,94 @@ footer {
         margin-bottom: 25px !important;
     }
 
-    .hamburger {
-        display: block;
-        z-index: 1001;
+    .hamburguer-btn {
+        /* Mostra o botão no mobile */
+        display: block !important;
+        font-size: 2em;
+        background: none;
+        border: none;
+        color: white;
+        /* Cor do X ou das barras */
+        cursor: pointer;
+        order: 1;
+        /* Garante que fique no canto (opcional) */
     }
 
-    /* ESCONDE DE VERDADE */
-    .nav {
+    .nav-links {
+        /* ⚠️ ESCONDE O MENU POR PADRÃO NO MOBILE */
         display: none !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
         width: 100%;
-        background: #4a4a4a;
-        z-index: 1000;
+        /* Ocupa a largura total quando aparecer */
     }
 
-    /* QUANDO ABRIR */
-    .nav.active {
-        display: block !important;
-    }
-
-    .nav-list {
-        display: flex;
+    /* O estado que o JavaScript vai adicionar para MOSTRAR o menu */
+    .nav-links.active {
+        display: flex !important;
+        /* OU 'block' */
         flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
+        text-align: center;
+        background-color: #333;
         gap: 16px;
+        /* Fundo escuro para destacar o menu */
     }
 
-    /* BOTÕES */
-    .btn-cta {
-        display: block !important;
+    
+}
 
-        /* 1. LARGURA CONTROLADA: */
-        width: 100% !important;
-        max-width: 260px !important;
-        /* 🔑 Limita a largura (antes estava 320px ou solto) */
+.nav-links {
+    display: none;
+}
 
-        /* 2. MAIS FINOS (MENOS ALTURA): */
-        padding: 10px 15px !important;
-        /* 🔑 Reduzi de 15px para 10px */
+/* BOTÕES */
+.btn-cta {
+    display: block !important;
 
-        /* 3. LETRA UM POUCO MENOR: */
-        font-size: 0.9em !important;
-        /* 🔑 Letra mais delicada */
+    /* 1. LARGURA CONTROLADA: */
+    width: 100% !important;
+    max-width: 260px !important;
+    /* 🔑 Limita a largura (antes estava 320px ou solto) */
 
-        /* Centralização e Margem */
-        margin: 0 auto 10px auto !important;
-        /* Centraliza e dá espaço de 10px embaixo */
-    }
+    /* 2. MAIS FINOS (MENOS ALTURA): */
+    padding: 10px 15px !important;
+    /* 🔑 Reduzi de 15px para 10px */
 
-    /* --- 3. CARROSSEL (Correção do corte) --- */
-    .carousel-wrapper {
-        width: 100% !important;
-        padding: 0 !important;
-        overflow: visible !important;
-    }
+    /* 3. LETRA UM POUCO MENOR: */
+    font-size: 0.9em !important;
+    /* 🔑 Letra mais delicada */
 
-    .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        min-width: 80vw !important;
-        max-width: 320px !important;
-    }
+    /* Centralização e Margem */
+    margin: 0 auto 10px auto !important;
+    /* Centraliza e dá espaço de 10px embaixo */
+}
 
-    .promocao-card {
-        min-width: 80vw !important;
-        /* Ocupa 80% da tela do celular */
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
-    }
+/* --- 3. CARROSSEL (Correção do corte) --- */
+.carousel-wrapper {
+    width: 100% !important;
+    padding: 0 !important;
+    overflow: visible !important;
+}
 
-    /* GERAL */
-    .sobre-conteudo {
-        flex-direction: column !important;
-        padding: 0 20px !important;
-    }
+.promocao-items-container {
+    /* Espaço interno para a sombra aparecer inteira */
+    min-width: 80vw !important;
+    max-width: 320px !important;
+}
 
-    .sobre-texto,
-    .sobre-localizacao {
-        width: 100% !important;
-    }
+.promocao-card {
+    min-width: 80vw !important;
+    /* Ocupa 80% da tela do celular */
+    max-width: 320px !important;
+    margin: 0 auto !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* GERAL */
+.sobre-conteudo {
+    flex-direction: column !important;
+    padding: 0 20px !important;
+}
+
+.sobre-texto,
+.sobre-localizacao {
+    width: 100% !important;
 }
