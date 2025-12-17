@@ -660,27 +660,31 @@ footer {
         margin-bottom: 25px !important;
     }
 
-    .hamburger {
+     .hamburger {
     display: block;
   }
 
+  /* ESCONDE o menu por padrão */
   .nav {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 0;
     width: 100%;
-    background: #111;
-    overflow: hidden;
+    background: #4a4a4a;
     max-height: 0;
+    overflow: hidden;
     transition: max-height 0.4s ease;
+    z-index: 999;
   }
 
   .nav-list {
     flex-direction: column;
     padding: 20px;
     gap: 16px;
+    text-align: center;
   }
 
+  /* QUANDO ABERTO */
   .nav.active {
     max-height: 300px;
   }
