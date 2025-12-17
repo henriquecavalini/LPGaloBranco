@@ -680,15 +680,7 @@ footer {
         /* Garante que o card seja um bloco flexível */
         flex-shrink: 0 !important;
     }
-
-    .promocao-items-container::-webkit-scrollbar {
-        height: 5px; /* Barra bem fininha se aparecer */
-    }
-
-    .promocao-items-container::-webkit-scrollbar-thumb {
-        background: #555; 
-        border-radius: 10px;
-    }
+    
     
     /* GERAL */
     .sobre-conteudo {
