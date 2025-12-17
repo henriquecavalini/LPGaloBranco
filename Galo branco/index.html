@@ -17,6 +17,13 @@
         const LOJA_NOME = "Foodshop Galo Branco";
         const WHATSAPP_NUMERO = "5516994398731";
         const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
     </script>
 
     <header>
@@ -61,9 +68,9 @@
             </div>
 
             <button class="hamburger" aria-label="Abrir menu">
-            <span></span>
-            <span></span>
-            <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
             </button>
         </div>
     </section>
