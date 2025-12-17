@@ -567,13 +567,20 @@ footer {
 
     /* BLOCO DA IMAGEM */
     .hero-imagem {
-        /* Joga a imagem para o topo (acima do texto) */
+        /* Ordem e posicionamento */
         order: -1 !important; 
         width: 100% !important;
-        margin-bottom: 20px !important;
-        /* Garante centralização */
         display: flex !important;
         justify-content: center !important;
+        
+        /* 🔑 O TRUQUE: Removemos o fundo cinza e a sombra para não parecer um card separado */
+        background-color: transparent !important; 
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        
+        /* Aproxima a logo do texto */
+        margin-bottom: 10px !important; 
     }
 
     /* A IMAGEM EM SI */
