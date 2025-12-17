@@ -663,24 +663,11 @@ footer {
     }
 
     .promocao-card {
-        /* Mantém o tamanho bom */
-        min-width: 80vw !important; 
-        max-width: 300px !important;
-        
-        /* Garante que o card não encoste no vizinho */
-        margin-right: 20px !important; 
-        
-        /* Centraliza se tiver só um */
-        margin-left: auto !important; 
-        margin-right: auto !important;
-        
-        /* Sombra (se estiver cortando a sombra, o padding acima resolve) */
-        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
-        
-        /* Garante que o card seja um bloco flexível */
-        flex-shrink: 0 !important;
+        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
     }
-    
     
     /* GERAL */
     .sobre-conteudo {
