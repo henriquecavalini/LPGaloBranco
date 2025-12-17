@@ -636,20 +636,58 @@ footer {
     /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
+        /* Overflow visible permite que sombras passem do limite se necessário */
+        overflow: visible !important; 
         padding: 0 !important;
-        overflow: hidden !important;
     }
 
     .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 40px 20px !important; 
+        display: flex !important;
+        
+        /* 🔑 A SOLUÇÃO: Aumentei muito o padding (respiro) */
+        /* 40px em cima e embaixo garante que a sombra não corte */
+        padding: 40px 30px !important; 
+        
+        /* Permite rolar para o lado */
+        overflow-x: auto !important; 
+        
+        /* Evita barra de rolagem vertical feia */
+        overflow-y: hidden !important; 
+        
+        /* Comportamento suave ao rolar */
+        scroll-behavior: smooth !important;
+        
+        /* Garante que o container pegue a largura total */
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        /* Mantém o tamanho bom */
+        min-width: 80vw !important; 
+        max-width: 300px !important;
+        
+        /* Garante que o card não encoste no vizinho */
+        margin-right: 20px !important; 
+        
+        /* Centraliza se tiver só um */
+        margin-left: auto !important; 
+        margin-right: auto !important;
+        
+        /* Sombra (se estiver cortando a sombra, o padding acima resolve) */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3) !important;
+        
+        /* Garante que o card seja um bloco flexível */
+        flex-shrink: 0 !important;
+    }
+
+    .promocao-items-container::-webkit-scrollbar {
+        height: 5px; /* Barra bem fininha se aparecer */
+    }
+
+    .promocao-items-container::-webkit-scrollbar-thumb {
+        background: #555; 
+        border-radius: 10px;
     }
     
     /* GERAL */
