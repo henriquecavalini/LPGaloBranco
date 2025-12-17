@@ -656,25 +656,25 @@ footer {
         box-sizing: border-box !important;
     }
 
-    .promocao-card {
-        /* 1. COR DO CARD: Cinza visível (não transparente/preto) */
-        background-color: #505050 !important; /* Usei um cinza levemente mais claro */
-        color: #ffffff !important; /* Texto branco */
+    div.promocao-card {
+        /* FORÇA BRUTA NA COR: Cinza Médio */
+        background: #444444 !important; 
         
-        /* 2. TAMANHO */
+        /* Garante que o texto apareça */
+        color: #ffffff !important; 
+        
+        /* Tamanho e Margens */
         min-width: 80vw !important; 
         max-width: 300px !important;
-        
-        /* 3. DISTÂNCIA ENTRE OS CARDS */
         margin: 0 15px !important; 
         
-        /* 4. SOMBRA E BORDA */
+        /* Sombra e Borda Branca para testar se o CSS está sendo lido */
         box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
-        border: 1px solid #666 !important; /* Borda mais clara para destacar */
+        border: 2px solid #ffffff !important; 
         border-radius: 12px !important;
         
-        /* Impede de encolher */
         flex-shrink: 0 !important;
+        display: block !important;
     }
     
     /* Ajustes das pontas do carrossel */
