@@ -681,10 +681,6 @@ footer {
         flex-shrink: 0 !important;
         border-radius: 10px !important;
     }
-
-    .promocao-card:last-child {
-        margin-right: 30px !important;
-    }
     
     /* GERAL */
     .sobre-conteudo {
