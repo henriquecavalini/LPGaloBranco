@@ -18,15 +18,6 @@
         const WHATSAPP_NUMERO = "5516994398731";
         const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
     </script>
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('.nav');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-    </script>
 
 
     <header>
@@ -163,6 +154,12 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
+
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
             const LOJA_NOME = "Foodshop Galo Branco"; // opcional, já tinha no seu script
             const WHATSAPP_NUMERO = "5516994398731";
             const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
