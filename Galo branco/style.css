@@ -621,7 +621,7 @@ footer {
         
         /* 1. LARGURA CONTROLADA: */
         width: 100% !important;
-        max-width: 260px !important; /* 🔑 Limita a largura (antes estava 320px ou solto) */
+        max-width: 250px !important; /* 🔑 Limita a largura (antes estava 320px ou solto) */
         
         /* 2. MAIS FINOS (MENOS ALTURA): */
         padding: 10px 15px !important; /* 🔑 Reduzi de 15px para 10px */
@@ -638,7 +638,7 @@ footer {
         width: 100% !important;
         /* Overflow visible permite que sombras passem do limite se necessário */
         overflow: visible !important; 
-        padding: -10 !important;
+        padding: 0 !important;
     }
 
     .promocao-items-container {
