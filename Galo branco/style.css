@@ -637,11 +637,7 @@ footer {
     /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
-        
-        /* 🔑 O PULO DO GATO: */
-        /* Damos espaço no wrapper também para ele não cortar o container */
-        padding: 20px 0 !important; 
-        
+        padding: 0 !important;
         overflow: hidden !important;
     }
 
