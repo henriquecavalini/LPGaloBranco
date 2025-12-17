@@ -643,7 +643,8 @@ footer {
 
     .promocao-items-container {
         /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 40px 20px !important; 
+        min-width: 80vw !important;
+        max-width: 320px !important;
     }
 
     .promocao-card {
