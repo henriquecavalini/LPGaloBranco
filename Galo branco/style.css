@@ -567,20 +567,34 @@ footer {
 
     /* BLOCO DA IMAGEM */
     .hero-imagem {
-        /* Joga a imagem para o topo (acima do texto) */
-        order: -1 !important; 
-        width: 100% !important;
+        order: -1 !important; /* Joga pra cima */
+        width: 100% !important; /* Ocupa a largura total da tela */
+        
+        /* Remove qualquer estilo de "card" */
+        background: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
         margin-bottom: 20px !important;
-        /* Garante centralização */
+        
+        /* Força o alinhamento do conteúdo interno */
         display: flex !important;
         justify-content: center !important;
+        text-align: center !important;
     }
 
     /* A IMAGEM EM SI */
-    .logo-hero {
-        max-width: 250px !important; /* Tamanho controlado no celular */
+    .hero-imagem img, .logo-hero {
+        /* Transforma a imagem em um bloco para aceitar margem automática */
+        display: block !important; 
+        
+        /* Margem automática nas laterais = CENTRO PERFEITO */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        /* Garante que ela não fique gigante */
+        max-width: 250px !important;
         height: auto !important;
-        display: block !important;
     }
 
     /* BLOCO DO TEXTO */
@@ -605,9 +619,19 @@ footer {
     /* BOTÕES */
     .btn-cta {
         display: block !important;
+        
+        /* 1. LARGURA CONTROLADA: */
         width: 100% !important;
-        max-width: 320px !important;
-        margin: 0 auto 15px auto !important; /* Centraliza */
+        max-width: 260px !important; /* 🔑 Limita a largura (antes estava 320px ou solto) */
+        
+        /* 2. MAIS FINOS (MENOS ALTURA): */
+        padding: 10px 15px !important; /* 🔑 Reduzi de 15px para 10px */
+        
+        /* 3. LETRA UM POUCO MENOR: */
+        font-size: 0.9em !important; /* 🔑 Letra mais delicada */
+        
+        /* Centralização e Margem */
+        margin: 0 auto 10px auto !important; /* Centraliza e dá espaço de 10px embaixo */
     }
 
     /* --- 3. CARROSSEL (Correção do corte) --- */
