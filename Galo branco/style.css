@@ -638,7 +638,7 @@ footer {
         width: 100% !important;
         /* Overflow visible permite que sombras passem do limite se necessário */
         overflow: visible !important; 
-        padding: 0 !important;
+        padding: -10 !important;
     }
 
     .promocao-items-container {
