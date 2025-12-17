@@ -547,150 +547,123 @@ footer {
     /* --- 1. CABEÇALHO --- */
     .header-content {
         flex-direction: column !important;
-        text-align: center !important;
         gap: 15px !important;
+        text-align: center !important;
     }
 
-    /* --- 2. HERO (Centralização Forçada) --- */
+    .logo-imagem {
+        width: 100% !important;
+        justify-content: center !important;
+        display: flex !important;
+    }
+
+    /* --- 2. HERO (LOGO E TEXTO) --- */
     .hero-conteudo {
-        /* Coloca um bloco em cima do outro */
         flex-direction: column !important;
-        /* Centraliza tudo */
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
-        /* Espaço nas laterais para texto não colar na borda */
         padding: 40px 20px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* BLOCO DA IMAGEM */
+    /* Bloco da Imagem */
     .hero-imagem {
-        order: -1 !important; /* Joga pra cima */
-        width: 100% !important; /* Ocupa a largura total da tela */
-        
-        /* Remove qualquer estilo de "card" */
-        background: transparent !important;
+        order: -1 !important; /* Joga imagem pra cima */
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        background: transparent !important; /* Remove fundo de card antigo */
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
-        margin-bottom: 20px !important;
-        
-        /* Força o alinhamento do conteúdo interno */
         display: flex !important;
         justify-content: center !important;
-        text-align: center !important;
     }
-    /* A IMAGEM EM SI */
+
+    /* A Imagem em si */
     .hero-imagem img, .logo-hero {
-        /* Transforma a imagem em um bloco para aceitar margem automática */
-        display: block !important; 
-        
-        /* Margem automática nas laterais = CENTRO PERFEITO */
-        margin-left: auto !important;
-        margin-right: auto !important;
-        
-        /* Garante que ela não fique gigante */
+        display: block !important;
+        margin: 0 auto !important; /* Centraliza */
         max-width: 250px !important;
         height: auto !important;
     }
 
-    /* BLOCO DO TEXTO */
+    /* Bloco de Texto */
     .hero-texto {
         width: 100% !important;
-        max-width: 600px !important; /* Evita linhas muito longas */
         margin: 0 auto !important;
         text-align: center !important;
+        background: transparent !important;
     }
 
     .hero-texto h2 {
-        font-size: 1.8em !important; /* Fonte menor */
+        font-size: 1.8em !important;
         line-height: 1.3 !important;
+        text-align: center !important;
         margin-bottom: 15px !important;
     }
-    
-    .subtitle {
-        font-size: 1em !important;
-        margin-bottom: 25px !important;
-    }
 
-    /* BOTÕES */
+    /* Botões Pequenos */
     .btn-cta {
         display: block !important;
-        
-        /* 1. LARGURA CONTROLADA: */
         width: 100% !important;
-        max-width: 250px !important; /* 🔑 Limita a largura (antes estava 320px ou solto) */
-        
-        /* 2. MAIS FINOS (MENOS ALTURA): */
-        padding: 10px 15px !important; /* 🔑 Reduzi de 15px para 10px */
-        
-        /* 3. LETRA UM POUCO MENOR: */
-        font-size: 0.9em !important; /* 🔑 Letra mais delicada */
-        
-        /* Centralização e Margem */
-        margin: 0 auto 10px auto !important; /* Centraliza e dá espaço de 10px embaixo */
+        max-width: 260px !important;
+        padding: 10px 15px !important;
+        font-size: 0.9em !important;
+        margin: 0 auto 10px auto !important;
     }
 
-/* --- 3. CARROSSEL (CORRIGIDO: Cor Cinza e Sem Cortes) --- */
+    /* --- 3. CARROSSEL (FUNDO CINZA + SEM CORTES) --- */
     
     .carousel-wrapper {
         width: 100% !important;
         padding: 0 !important;
-        overflow: hidden !important; 
+        overflow: hidden !important;
     }
 
     .promocao-items-container {
         display: flex !important;
-        
-        /* ESPAÇO PARA SOMBRA: 60px em cima/baixo e 40px nos lados */
-        padding: 60px 40px !important; 
-        
-        /* Rolagem */
-        overflow-x: auto !important; 
+        /* Padding gigante para salvar a sombra */
+        padding: 60px 40px !important;
+        overflow-x: auto !important;
         overflow-y: hidden !important;
-        scroll-behavior: smooth !important;
-        
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    div.promocao-card {
-        /* FORÇA BRUTA NA COR: Cinza Médio */
-        background: #444444 !important; 
+    .promocao-card {
+        /* COR DO CARD: Cinza Escuro (Forçado) */
+        background-color: #444444 !important; 
+        color: #ffffff !important;
         
-        /* Garante que o texto apareça */
-        color: #ffffff !important; 
-        
-        /* Tamanho e Margens */
-        min-width: 80vw !important; 
+        /* Tamanho */
+        min-width: 80vw !important;
         max-width: 300px !important;
-        margin: 0 15px !important; 
         
-        /* Sombra e Borda Branca para testar se o CSS está sendo lido */
+        /* Espaçamento */
+        margin: 0 15px !important;
+        
+        /* Estilo */
         box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
-        border: 2px solid #ffffff !important; 
+        border: 1px solid #666 !important;
         border-radius: 12px !important;
-        
         flex-shrink: 0 !important;
         display: block !important;
     }
-    
-    /* Ajustes das pontas do carrossel */
-    .promocao-card:first-child {
-        margin-left: 0 !important;
-    }
-    .promocao-card:last-child {
-        margin-right: 0 !important;
-    }
-    
-    /* GERAL */
+
+    /* --- 4. GERAL --- */
     .sobre-conteudo {
         flex-direction: column !important;
         padding: 0 20px !important;
     }
+    
     .sobre-texto, .sobre-localizacao {
         width: 100% !important;
     }
+    
+    .cinema-iframe-full-width {
+        height: 350px !important;
+    }
+
 }
