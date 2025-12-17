@@ -567,27 +567,33 @@ footer {
 
     /* BLOCO DA IMAGEM */
     .hero-imagem {
-        /* Ordem e posicionamento */
-        order: -1 !important; 
-        width: 100% !important;
-        display: flex !important;
-        justify-content: center !important;
+        order: -1 !important; /* Joga pra cima */
+        width: 100% !important; /* Ocupa a largura total da tela */
         
-        /* 🔑 O TRUQUE: Removemos o fundo cinza e a sombra para não parecer um card separado */
-        background-color: transparent !important; 
+        /* Remove qualquer estilo de "card" */
+        background: transparent !important;
         box-shadow: none !important;
         border: none !important;
         padding: 0 !important;
+        margin-bottom: 20px !important;
         
-        /* Aproxima a logo do texto */
-        margin-bottom: 10px !important; 
+        /* Força o alinhamento do conteúdo interno */
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
-
     /* A IMAGEM EM SI */
-    .logo-hero {
-        max-width: 250px !important; /* Tamanho controlado no celular */
+    .hero-imagem img, .logo-hero {
+        /* Transforma a imagem em um bloco para aceitar margem automática */
+        display: block !important; 
+        
+        /* Margem automática nas laterais = CENTRO PERFEITO */
+        margin-left: auto !important;
+        margin-right: auto !important;
+        
+        /* Garante que ela não fique gigante */
+        max-width: 250px !important;
         height: auto !important;
-        display: block !important;
     }
 
     /* BLOCO DO TEXTO */
