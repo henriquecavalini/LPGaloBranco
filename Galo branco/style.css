@@ -637,20 +637,43 @@ footer {
     /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
-        padding: 0 !important;
+        
+        /* 🔑 O PULO DO GATO: */
+        /* Damos espaço no wrapper também para ele não cortar o container */
+        padding: 20px 0 !important; 
+        
         overflow: hidden !important;
     }
 
     .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 10000px 20px !important; 
+        display: flex !important;
+        
+        /* Espaço interno generoso: 40px embaixo (3º número) deve bastar */
+        /* Se ainda cortar, aumente o 40px para 60px */
+        padding: 20px 20px 40px 20px !important; 
+        
+        /* Rolagem lateral */
+        overflow-x: auto !important;
+        
+        /* 🔑 IMPORTANTE: Permite que a sombra "vaze" um pouco na vertical */
+        overflow-y: visible !important; 
+        
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
+        min-width: 80vw !important;
         max-width: 320px !important;
         margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        
+        /* Sombra forte para testar */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+        
+        /* Garante que o card não fique transparente */
+        background-color: #444444 !important; 
+        color: white !important;
+        border-radius: 10px !important;
     }
     
     /* GERAL */
