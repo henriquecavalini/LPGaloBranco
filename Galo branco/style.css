@@ -633,24 +633,57 @@ footer {
         margin: 0 auto 10px auto !important; /* Centraliza e dá espaço de 10px embaixo */
     }
 
-    /* --- 3. CARROSSEL (Correção do corte) --- */
+/* --- 3. CARROSSEL (VERSÃO BLINDADA) --- */
+    
     .carousel-wrapper {
         width: 100% !important;
-        /* Overflow visible permite que sombras passem do limite se necessário */
-        overflow: visible !important; 
         padding: 0 !important;
+        overflow: hidden !important; 
     }
 
     .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 40px 20px !important; 
+        display: flex !important;
+        
+        /* 🔑 O EXAGERO NECESSÁRIO: 60px de altura extra e 40px nas laterais */
+        /* Se cortar agora, é bruxaria! */
+        padding: 60px 40px !important; 
+        
+        /* Configuração de Rolagem */
+        overflow-x: auto !important; 
+        overflow-y: hidden !important;
+        scroll-behavior: smooth !important;
+        
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
-        max-width: 320px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        /* 1. COR DO CARD (CORRIGIDO PRETO): Cinza Escuro Fixo */
+        background-color: #444444 !important; 
+        color: #ffffff !important;
+        
+        /* 2. TAMANHO E ESPAÇAMENTO */
+        min-width: 80vw !important; 
+        max-width: 300px !important;
+        
+        /* Adiciona espaço em volta do próprio card */
+        margin: 0 15px !important; 
+        
+        /* 3. SOMBRA E BORDA */
+        box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
+        border: 1px solid #555 !important;
+        border-radius: 12px !important;
+        
+        /* Impede encolhimento */
+        flex-shrink: 0 !important;
+    }
+    
+    /* Ajuste para o primeiro e último card não colarem na tela */
+    .promocao-card:first-child {
+        margin-left: 0 !important;
+    }
+    .promocao-card:last-child {
+        margin-right: 0 !important;
     }
     
     /* GERAL */
