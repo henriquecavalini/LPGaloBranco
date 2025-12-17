@@ -636,21 +636,54 @@ footer {
     /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
-        /* Overflow visible permite que sombras passem do limite se necessário */
-        overflow: visible !important; 
         padding: 0 !important;
+        overflow: hidden !important; /* O wrapper esconde o que passa da tela */
     }
 
     .promocao-items-container {
-        /* Espaço interno para a sombra aparecer inteira */
-        padding: 20px 20px 40px 20px !important; 
+        display: flex !important;
+        
+        /* 1. CORREÇÃO DO CORTE: Aumentei para 50px em cima/baixo */
+        /* Isso cria uma área segura gigante para a sombra não cortar */
+        padding: 50px 30px !important; 
+        
+        /* Permite rolagem lateral */
+        overflow-x: auto !important; 
+        overflow-y: hidden !important;
+        scroll-behavior: smooth !important;
+        
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .promocao-card {
-        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
+        /* 2. CORREÇÃO DA COR PRETA: Força o fundo cinza */
+        background-color: #444444 !important; /* Ou use var(--soft-grey) se funcionar */
+        color: #ffffff !important; /* Garante texto branco */
+        border: 1px solid #555 !important; /* Bordinha sutil para destacar */
+        
+        /* Tamanho */
+        min-width: 80vw !important; 
         max-width: 320px !important;
-        margin: 0 auto !important;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
+        
+        /* Margens: Espaço entre um card e outro */
+        margin-right: 20px !important; 
+        
+        /* Remove margens automáticas que podem desalinas o carrossel */
+        margin-left: 0 !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        
+        /* Sombra */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.5) !important;
+        
+        /* Garante rigidez */
+        flex-shrink: 0 !important;
+        border-radius: 10px !important;
+    }
+
+    .promocao-card:last-child {
+        margin-right: 30px !important;
     }
     
     /* GERAL */
