@@ -547,75 +547,70 @@ footer {
     /* --- 1. CABEÇALHO --- */
     .header-content {
         flex-direction: column !important;
-        gap: 15px !important;
         text-align: center !important;
+        gap: 15px !important;
     }
 
-    .logo-imagem {
-        width: 100% !important;
-        justify-content: center !important;
-        display: flex !important;
-    }
-
-    /* --- 2. HERO (LOGO E TEXTO) --- */
+    /* --- 2. HERO (Centralização Forçada) --- */
     .hero-conteudo {
+        /* Coloca um bloco em cima do outro */
         flex-direction: column !important;
+        /* Centraliza tudo */
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
+        /* Espaço nas laterais para texto não colar na borda */
         padding: 40px 20px !important;
         width: 100% !important;
         box-sizing: border-box !important;
     }
 
-    /* Bloco da Imagem */
+    /* BLOCO DA IMAGEM */
     .hero-imagem {
-        order: -1 !important; /* Joga imagem pra cima */
+        /* Joga a imagem para o topo (acima do texto) */
+        order: -1 !important; 
         width: 100% !important;
         margin-bottom: 20px !important;
-        background: transparent !important; /* Remove fundo de card antigo */
-        box-shadow: none !important;
-        border: none !important;
-        padding: 0 !important;
+        /* Garante centralização */
         display: flex !important;
         justify-content: center !important;
     }
 
-    /* A Imagem em si */
-    .hero-imagem img, .logo-hero {
-        display: block !important;
-        margin: 0 auto !important; /* Centraliza */
-        max-width: 250px !important;
+    /* A IMAGEM EM SI */
+    .logo-hero {
+        max-width: 250px !important; /* Tamanho controlado no celular */
         height: auto !important;
+        display: block !important;
     }
 
-    /* Bloco de Texto */
+    /* BLOCO DO TEXTO */
     .hero-texto {
         width: 100% !important;
+        max-width: 600px !important; /* Evita linhas muito longas */
         margin: 0 auto !important;
         text-align: center !important;
-        background: transparent !important;
     }
 
     .hero-texto h2 {
-        font-size: 1.8em !important;
+        font-size: 1.8em !important; /* Fonte menor */
         line-height: 1.3 !important;
-        text-align: center !important;
         margin-bottom: 15px !important;
     }
+    
+    .subtitle {
+        font-size: 1em !important;
+        margin-bottom: 25px !important;
+    }
 
-    /* Botões Pequenos */
+    /* BOTÕES */
     .btn-cta {
         display: block !important;
         width: 100% !important;
-        max-width: 260px !important;
-        padding: 10px 15px !important;
-        font-size: 0.9em !important;
-        margin: 0 auto 10px auto !important;
+        max-width: 320px !important;
+        margin: 0 auto 15px auto !important; /* Centraliza */
     }
 
-    /* --- 3. CARROSSEL (FUNDO CINZA + SEM CORTES) --- */
-    
+    /* --- 3. CARROSSEL (Correção do corte) --- */
     .carousel-wrapper {
         width: 100% !important;
         padding: 0 !important;
@@ -623,47 +618,23 @@ footer {
     }
 
     .promocao-items-container {
-        display: flex !important;
-        /* Padding gigante para salvar a sombra */
-        padding: 60px 40px !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
+        /* Espaço interno para a sombra aparecer inteira */
+        padding: 20px 20px 40px 20px !important; 
     }
 
     .promocao-card {
-        /* COR DO CARD: Cinza Escuro (Forçado) */
-        background-color: #444444 !important; 
-        color: #ffffff !important;
-        
-        /* Tamanho */
-        min-width: 80vw !important;
-        max-width: 300px !important;
-        
-        /* Espaçamento */
-        margin: 0 15px !important;
-        
-        /* Estilo */
-        box-shadow: 0 15px 30px rgba(0,0,0,0.5) !important;
-        border: 1px solid #666 !important;
-        border-radius: 12px !important;
-        flex-shrink: 0 !important;
-        display: block !important;
+        min-width: 80vw !important; /* Ocupa 80% da tela do celular */
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3) !important;
     }
-
-    /* --- 4. GERAL --- */
+    
+    /* GERAL */
     .sobre-conteudo {
         flex-direction: column !important;
         padding: 0 20px !important;
     }
-    
     .sobre-texto, .sobre-localizacao {
         width: 100% !important;
     }
-    
-    .cinema-iframe-full-width {
-        height: 350px !important;
-    }
-
 }
