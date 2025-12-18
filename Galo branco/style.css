@@ -742,15 +742,14 @@ footer {
   }
 
   /* MENU ABERTO */
-  .nav.active {
-    display: block !important;
-    position: absolute;
-    top: 100%;
+.nav.active {
+    position: fixed;
+    top: 70px;
     left: 0;
     width: 100%;
     background: #4a4a4a;
-    z-index: 1001;
-}
+    z-index: 9999;
+  }
 
   .nav-list {
     flex-direction: column;
