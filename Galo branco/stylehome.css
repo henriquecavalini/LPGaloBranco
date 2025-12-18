@@ -699,5 +699,7 @@ footer {
         flex-direction: column;
         padding: 20px 0;
         gap: 16px;
+        align-items: center;
+        text-align: center;
     }
 }
