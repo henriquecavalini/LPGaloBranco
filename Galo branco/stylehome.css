@@ -268,8 +268,11 @@ nav i {
 .botoes-contato .btn-cta {
   width: 100%;
   max-width: 320px;
-  text-align: center;
-  white-space: normal;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-sizing: border-box;
 }
 
 .btn-cta i {
@@ -617,10 +620,12 @@ footer {
         margin-bottom: 30px;
     }
 
-    .btn-cta {
+    .botoes-contato .btn-cta {
+        margin-top: 40px;
         width: 100%;
-        max-width: 280px;
-        white-space: normal;
+        max-width: 320px;
+        padding: 14px 20px;
+        font-size: 0.95em;
     }
 
     .logo {
