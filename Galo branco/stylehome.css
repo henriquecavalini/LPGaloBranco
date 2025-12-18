@@ -265,15 +265,11 @@ nav i {
 }
 
 /* --- Botões CTA --- */
-.btn-cta {
-    display: inline-block;
-    text-decoration: none;
-    padding: 15px 25px;
-    border-radius: 5px;
-    font-weight: 700;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    transition: background-color 0.3s, transform 0.3s;
+.botoes-contato .btn-cta {
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  white-space: normal;
 }
 
 .btn-cta i {
