@@ -621,25 +621,10 @@ footer {
         margin-bottom: 30px;
     }
 
-    .btn-cta, btn-cta btn-vermelho, btn-cta btn-instagram {
-        display: block !important;
-
-        /* 1. LARGURA CONTROLADA: */
-        width: 100% !important;
-        max-width: 260px !important;
-        /* 🔑 Limita a largura (antes estava 320px ou solto) */
-
-        /* 2. MAIS FINOS (MENOS ALTURA): */
-        padding: 10px 15px !important;
-        /* 🔑 Reduzi de 15px para 10px */
-
-        /* 3. LETRA UM POUCO MENOR: */
-        font-size: 0.9em !important;
-        /* 🔑 Letra mais delicada */
-
-        /* Centralização e Margem */
-        margin: 0 auto 10px auto !important;
-        /* Centraliza e dá espaço de 10px embaixo */
+    .btn-cta {
+        width: 100%;
+        max-width: 280px;
+        white-space: normal;
     }
 
     .logo {
