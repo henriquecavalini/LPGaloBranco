@@ -744,13 +744,10 @@ footer {
   /* MENU ABERTO */
   .nav.active {
     display: block !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
+    pointer-events: auto;
     background: #4a4a4a;
-    z-index: 1001;
-}
+    z-index: 1000;
+  }
 
   .nav-list {
     flex-direction: column;
