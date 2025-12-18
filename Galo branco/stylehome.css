@@ -625,7 +625,7 @@ footer {
     .btn-cta {
         margin-top: 40px;
         width: 100%;
-        max-width: 260px;
+        max-width: 260px !important;
         padding: 14px 15px;
         font-size: 0.95em;
         margin: 0 auto 10px auto !important;
