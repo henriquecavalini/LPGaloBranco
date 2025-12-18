@@ -642,7 +642,13 @@ footer {
 @media (max-width: 768px) {
 
     /* --- 1. CABEÇALHO --- */
+
+    header {
+        display: block;
+    }
+
     .header-content {
+        display: flex;
         flex-direction: column !important;
         text-align: center !important;
         gap: 15px !important;
