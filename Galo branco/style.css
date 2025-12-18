@@ -51,6 +51,7 @@ header {
 .hamburger {
     display: none;
     background: none;
+    z-index: 1002;
     border: none;
     cursor: pointer;
     width: 32px;
@@ -740,8 +741,7 @@ footer {
     left: 0;
     width: 100%;
     background: #4a4a4a;
-    text-align: center;
-    z-index: 999;
+    z-index: 1001;
   }
 
   .nav-list {
