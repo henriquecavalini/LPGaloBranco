@@ -118,7 +118,7 @@ nav ul {
 }
 
 .nav {
-  display: block;
+    display: block;
 }
 
 nav a {
@@ -727,33 +727,43 @@ footer {
     }
 
     .nav {
-    display: none !important;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    pointer-events: none;
-  }
+        display: block !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        pointer-events: none;
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+        pointer-events: none;
 
-  .hamburger {
-    display: block !important;
-    position: relative;
-    z-index: 1001;
-  }
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease;
+    }
 
-  /* MENU ABERTO */
-  .nav.active {
-    display: block !important;
-    pointer-events: auto;
-    background: #4a4a4a;
-    z-index: 1000;
-  }
+    .hamburger {
+        display: block !important;
+        position: relative;
+        z-index: 1001;
+    }
 
-  .nav-list {
-    flex-direction: column;
-    padding: 20px 0;
-    gap: 16px;
-  }
+    /* MENU ABERTO */
+    .nav.active {
+        display: block !important;
+        pointer-events: auto;
+        background: #4a4a4a;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        padding: 20px 0;
+        gap: 16px;
+    }
 
     /* BOTÕES */
     .btn-cta {
