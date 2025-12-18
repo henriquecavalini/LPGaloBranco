@@ -621,7 +621,7 @@ footer {
         margin-bottom: 30px;
     }
 
-    .btn-cta {
+    .btn-cta, btn-cta btn-vermelho, btn-cta btn-instagram {
         display: block !important;
 
         /* 1. LARGURA CONTROLADA: */
