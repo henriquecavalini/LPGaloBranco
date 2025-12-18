@@ -42,6 +42,7 @@ h4 {
 
 /* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
 header {
+    position: relative;
     display: flex;
     background-color: var(--soft-grey);
     padding: 15px 0;
@@ -743,10 +744,13 @@ footer {
   /* MENU ABERTO */
   .nav.active {
     display: block !important;
-    pointer-events: auto;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background: #4a4a4a;
-    z-index: 1000;
-  }
+    z-index: 1001;
+}
 
   .nav-list {
     flex-direction: column;
