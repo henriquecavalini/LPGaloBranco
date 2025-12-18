@@ -654,6 +654,7 @@ footer {
         flex-direction: row !important;
         text-align: center !important;
         gap: 15px !important;
+        padding: 0 20px;
     }
 
     /* --- 2. HERO (Centralização Forçada) --- */
