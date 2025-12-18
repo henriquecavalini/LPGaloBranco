@@ -626,8 +626,9 @@ footer {
         margin-top: 40px;
         width: 100%;
         max-width: 320px;
-        padding: 14px 40px;
+        padding: 14px 20px;
         font-size: 0.95em;
+        margin: 40px auto 0 auto;
     }
 
     .logo {
