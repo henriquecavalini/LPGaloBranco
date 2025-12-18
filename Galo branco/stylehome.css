@@ -594,14 +594,18 @@ footer {
 }
 
 /* --- 7. RESPONSIVIDADE --- */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
 
-    .header-content,
-    .hero-conteudo,
-    .sobre-conteudo {
+    .header-content {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .hero-conteudo,
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
     }
 
     .hero-texto,
