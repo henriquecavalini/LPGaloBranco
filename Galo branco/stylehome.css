@@ -711,8 +711,8 @@ footer {
         text-align: center;
     }
 }
-@media (max-device-width: 1024px) and (orientation: landscape),
-       (max-device-width: 1024px) and (orientation: portrait) {
+
+@media (max-width: 1366px) {
 
     .header-content {
         display: flex;
@@ -741,7 +741,8 @@ footer {
 
     .btn-cta {
         width: 100%;
-        max-width: 340px; /* um pouco maior no iPad */
+        max-width: 340px;
+        /* um pouco maior no iPad */
         padding: 16px 20px;
         font-size: 1em;
         margin: 0 auto 14px auto;
