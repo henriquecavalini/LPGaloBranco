@@ -772,6 +772,7 @@ footer {
         /* Quase a largura toda no celular */
         max-width: 300px !important;
         /* Mas trava em 300px para ficar elegante */
+        margin: 20px auto !important;
         text-align: center !important;
         display: flex !important;
         justify-content: center !important;
