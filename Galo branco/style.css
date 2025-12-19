@@ -848,8 +848,8 @@ footer {
         margin-right: auto !important;
 
         /* Garante que ela não fique gigante */
-        max-width: 250px !important;
-        height: auto !important;
+        max-width: 380px !important;
+        width: 100%;
     }
 
     /* BLOCO DO TEXTO */
