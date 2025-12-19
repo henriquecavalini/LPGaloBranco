@@ -145,19 +145,19 @@ nav i {
 }
 
 .hero-conteudo {
-    display: flex;
-    flex-direction: column;   /* 🔥 CHAVE */
-    align-items: center;      /* centraliza horizontal */
-    justify-content: center;  /* centraliza vertical */
-    text-align: center;
+    flex-direction: row;
+    /* lado a lado */
+    align-items: center;
+    text-align: left;
+    gap: 60px;
 }
 
 
 .hero-texto {
-    display: flex;           /* 🔥 REMOVE FLEX */
-    margin: 0 auto;
-    max-width: 700px;
-    text-align: center;
+    order: 2;
+    /* direita */
+    width: 60%;
+    text-align: left;
 }
 
 
@@ -195,6 +195,8 @@ nav i {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    order: 1;
+    /* esquerda */
     /* Centraliza o conteúdo verticalmente */
 }
 
