@@ -144,8 +144,30 @@
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('.nav');
 
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('active');
+            // Abrir / fechar no botão
+            hamburger.addEventListener("click", function (e) {
+                e.stopPropagation(); // impede fechar imediatamente
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
+            });
+
+            // 🔥 FECHAR AO CLICAR FORA
+            document.addEventListener("click", function (e) {
+                const clicouNoMenu = nav.contains(e.target);
+                const clicouNoBotao = hamburger.contains(e.target);
+
+                if (!clicouNoMenu && !clicouNoBotao) {
+                    hamburger.classList.remove("active");
+                    nav.classList.remove("active");
+                }
+            });
+
+            // 🔥 FECHAR AO CLICAR EM UM LINK
+            nav.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    nav.classList.remove("active");
+                });
             });
 
             const ctaWhatsappSobre = document.getElementById('cta-whatsapp-sobre');
