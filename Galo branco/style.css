@@ -145,19 +145,19 @@ nav i {
 }
 
 .hero-conteudo {
-    flex-direction: row;
-    /* lado a lado */
+    display: flex;
+    flex-direction: row;        /* lado a lado */
     align-items: center;
-    text-align: center;
+    justify-content: center;
     gap: 60px;
 }
 
 
+
 .hero-texto {
-    order: 2;
-    /* direita */
     width: 60%;
-    text-align: center;
+    order: 2;                   /* direita */
+    text-align: left;
 }
 
 
@@ -184,20 +184,8 @@ nav i {
 
 
 .hero-imagem {
-    /* Mantém as dimensões e o estilo de card */
     width: 40%;
-    background: transparent;
-    box-shadow: none;
-    padding: 0;
-
-    /* Garante que os itens internos fiquem centralizados */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    order: 1;
-    /* esquerda */
-    /* Centraliza o conteúdo verticalmente */
+    order: 1;                   /* esquerda */
 }
 
 /* NOVO: Estiliza o card que foi movido para o Hero */
