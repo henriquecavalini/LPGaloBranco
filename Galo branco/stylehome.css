@@ -711,7 +711,8 @@ footer {
         text-align: center;
     }
 }
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (max-device-width: 1024px) and (orientation: landscape),
+       (max-device-width: 1024px) and (orientation: portrait) {
 
     .header-content {
         display: flex;
