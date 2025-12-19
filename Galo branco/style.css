@@ -146,7 +146,8 @@ nav i {
 
 .hero-conteudo {
     display: flex;
-    flex-direction: row;        /* lado a lado */
+    flex-direction: row;
+    /* lado a lado */
     align-items: center;
     justify-content: center;
     gap: 60px;
@@ -156,7 +157,8 @@ nav i {
 
 .hero-texto {
     width: 60%;
-    order: 2;                   /* direita */
+    order: 2;
+    /* direita */
     text-align: left;
 }
 
@@ -185,10 +187,11 @@ nav i {
 
 .hero-imagem {
     width: 50%;
-    order: 1;                   /* esquerda */
+    order: 1;
+    /* esquerda */
 }
 
-.hero-imagem img{
+.hero-imagem img {
     max-width: 380px;
     width: 100%;
 }
@@ -804,6 +807,12 @@ footer {
     }
 
     /* --- 2. HERO (Centralização Forçada) --- */
+
+    .hero {
+        padding-top: 20px !important;
+        padding-bottom: 40px !important;
+    }
+
     .hero-conteudo {
         /* Coloca um bloco em cima do outro */
         flex-direction: column !important;
@@ -830,6 +839,7 @@ footer {
         border: none !important;
         padding: 0 !important;
         margin-bottom: 20px !important;
+        margin-top: 0 !important;
 
         /* Força o alinhamento do conteúdo interno */
         display: flex !important;
