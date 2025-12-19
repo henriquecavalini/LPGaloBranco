@@ -189,7 +189,6 @@ nav i {
 }
 
 
-
 /* NOVO: Estiliza o card que foi movido para o Hero */
 .card-horarios-hero .link-card {
     /* Garante que o card preencha o espaço da coluna */
@@ -676,7 +675,7 @@ footer {
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        max-width: 250px !important;
+        max-width: 380px !important;
         height: auto !important;
     }
 
