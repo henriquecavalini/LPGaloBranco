@@ -595,7 +595,7 @@ footer {
 }
 
 /* --- 7. RESPONSIVIDADE --- */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
 
     .header-content {
         display: flex;
@@ -709,5 +709,97 @@ footer {
         gap: 16px;
         align-items: center;
         text-align: center;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero-conteudo,
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-texto,
+    .hero-imagem,
+    .sobre-texto,
+    .sobre-localizacao {
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-imagem {
+        order: -1;
+        margin-bottom: 30px;
+    }
+
+    .btn-cta {
+        width: 100%;
+        max-width: 340px; /* um pouco maior no iPad */
+        padding: 16px 20px;
+        font-size: 1em;
+        margin: 0 auto 14px auto;
+        border-radius: 8px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .cinema-iframe-full-width {
+        height: 500px;
+    }
+
+    /* Carrossel no iPad */
+    .promocao-card {
+        min-width: 70%;
+    }
+
+    .carousel-wrapper {
+        padding: 0 20px;
+    }
+
+    .mapa-iframe {
+        height: 350px;
+    }
+
+    /* MENU HAMBURGUER NO IPAD */
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #4a4a4a;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: 0.25s ease;
+    }
+
+    .nav.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 0;
+        gap: 18px;
     }
 }
