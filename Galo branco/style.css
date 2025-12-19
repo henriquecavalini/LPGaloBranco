@@ -639,7 +639,7 @@ footer {
 /* --- RESPONSIVIDADE FORÇADA (MOBILE E TABLET) --- */
 /* ========================================================= */
 
-@media (max-width: 1366px) {
+@media  (min-width: 1024px) and (max-width: 1366px)  {
 
     /* --- 1. CABEÇALHO --- */
 
