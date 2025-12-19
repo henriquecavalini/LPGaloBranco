@@ -157,38 +157,36 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const btnHamburguer = document.querySelector('.hamburguer');
-            const navMenu = document.querySelector('.nav');
+            const hamburger = document.querySelector('.hamburger');
+            const nav = document.querySelector('.nav');
 
-            // Função para abrir e fechar o menu
-            function toggleMenu(event) {
-                if (event.type === 'touchstart') event.preventDefault();
-                navMenu.classList.toggle('active');
+            hamburger.addEventListener('click', () => {
+                nav.classList.toggle('active');
+            });
 
-                // Opcional: Adiciona uma classe no botão para animação de X
-                btnHamburguer.classList.toggle('active');
-            }
+            // Abrir / fechar no botão
+            hamburger.addEventListener("click", function (e) {
+                e.stopPropagation(); // impede fechar imediatamente
+                hamburger.classList.toggle("active");
+                nav.classList.toggle("active");
+            });
 
-            btnHamburguer.addEventListener('click', toggleMenu);
-            btnHamburguer.addEventListener('touchstart', toggleMenu);
+            // 🔥 FECHAR AO CLICAR FORA
+            document.addEventListener("click", function (e) {
+                const clicouNoMenu = nav.contains(e.target);
+                const clicouNoBotao = hamburger.contains(e.target);
 
-            // 🔑 FECHAR AO CLICAR FORA
-            document.addEventListener('click', (event) => {
-                const clicouNoBotao = btnHamburguer.contains(event.target);
-                const clicouNoMenu = navMenu.contains(event.target);
-
-                // Se o menu estiver aberto e o clique NÃO foi no botão e NÃO no menu
-                if (navMenu.classList.contains('active') && !clicouNoBotao && !clicouNoMenu) {
-                    navMenu.classList.remove('active');
-                    btnHamburguer.classList.remove('active');
+                if (!clicouNoMenu && !clicouNoBotao) {
+                    hamburger.classList.remove("active");
+                    nav.classList.remove("active");
                 }
             });
 
-            // FECHAR AO CLICAR EM UM LINK
-            navMenu.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    navMenu.classList.remove('active');
-                    btnHamburguer.classList.remove('active');
+            // 🔥 FECHAR AO CLICAR EM UM LINK
+            nav.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    hamburger.classList.remove("active");
+                    nav.classList.remove("active");
                 });
             });
             const LOJA_NOME = "Foodshop Galo Branco"; // opcional, já tinha no seu script
