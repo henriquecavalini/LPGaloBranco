@@ -821,7 +821,7 @@ footer {
     .hero-imagem {
         order: -1 !important;
         /* Joga pra cima */
-        width: 100% !important;
+        width: 80% !important;
         /* Ocupa a largura total da tela */
 
         /* Remove qualquer estilo de "card" */
