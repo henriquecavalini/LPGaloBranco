@@ -885,20 +885,21 @@ footer {
     }
 
     .nav {
-        display: block !important;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        pointer-events: none;
-        opacity: 0;
-        transform: translateY(-10px) scale(0.98);
-        pointer-events: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
 
-        transition:
-            opacity 0.25s ease,
-            transform 0.25s ease;
-    }
+    width: 100%;
+    background: #4a4a4a;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 1000;
+}
 
     .hamburger {
         display: block !important;
@@ -909,20 +910,19 @@ footer {
 
     /* MENU ABERTO */
     .nav.active {
-        display: block !important;
-        pointer-events: auto;
-        background: #4a4a4a;
-        z-index: 1000;
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        pointer-events: auto;
-    }
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
 
     .nav-list {
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 16px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 0;
+}
 
     /* BOTÕES */
     .btn-cta {
