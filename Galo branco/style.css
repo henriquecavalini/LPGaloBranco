@@ -185,10 +185,9 @@ nav i {
 .hero-imagem {
     /* Mantém as dimensões e o estilo de card */
     width: 40%;
-    padding: 20px;
-    background-color: var(--soft-grey);
-    border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
 
     /* Garante que os itens internos fiquem centralizados */
     display: flex;
@@ -639,7 +638,7 @@ footer {
 /* --- RESPONSIVIDADE FORÇADA (MOBILE E TABLET) --- */
 /* ========================================================= */
 
-@media  (min-width: 1024px) and (max-width: 1366px)  {
+@media (min-width: 1024px) and (max-width: 1366px) {
 
     /* --- 1. CABEÇALHO --- */
 
