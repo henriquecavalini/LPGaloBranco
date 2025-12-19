@@ -184,8 +184,13 @@ nav i {
 
 
 .hero-imagem {
-    width: 70%;
+    width: 50%;
     order: 1;                   /* esquerda */
+}
+
+.hero-imagem img {
+    max-width: 380px;
+    width: 100%;
 }
 
 /* NOVO: Estiliza o card que foi movido para o Hero */
