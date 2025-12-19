@@ -148,7 +148,7 @@ nav i {
     flex-direction: row;
     /* lado a lado */
     align-items: center;
-    text-align: left;
+    text-align: center;
     gap: 60px;
 }
 
