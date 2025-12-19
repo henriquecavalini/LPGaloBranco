@@ -679,8 +679,8 @@ footer {
         display: block !important;
         margin-left: auto !important;
         margin-right: auto !important;
-        max-width: 250px !important;
-        height: auto !important;
+        max-width: 380px !important;
+        width: 100%;
     }
 
     .hero-texto {
