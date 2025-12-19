@@ -159,11 +159,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             const hamburger = document.querySelector('.hamburger');
             const nav = document.querySelector('.nav');
-
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('active');
-            });
-
+            
             // Abrir / fechar no botão
             hamburger.addEventListener("click", function (e) {
                 e.stopPropagation(); // impede fechar imediatamente
