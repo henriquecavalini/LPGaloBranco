@@ -810,7 +810,7 @@ footer {
 
     .hero {
         padding-top: 0px !important;
-        padding-bottom: -10px !important;
+        padding-bottom: 0px !important;
     }
 
 
@@ -818,8 +818,8 @@ footer {
         /* Coloca um bloco em cima do outro */
         flex-direction: column !important;
         /* Centraliza tudo */
-        align-items: center !important;
-        justify-content: center !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
         text-align: center !important;
         /* Espaço nas laterais para texto não colar na borda */
         padding: 40px 20px !important;
