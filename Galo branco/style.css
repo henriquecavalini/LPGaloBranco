@@ -769,14 +769,16 @@ footer {
     /* BOTÕES */
     .btn-cta {
         width: 90% !important;
-        /* Quase a largura toda no celular */
         max-width: 300px !important;
-        /* Mas trava em 300px para ficar elegante */
-        margin: 20px auto !important;
-        text-align: center !important;
+
         display: flex !important;
         justify-content: center !important;
         align-items: center !important;
+
+        margin: 20px auto !important;
+        /* 🔥 ISSO CENTRALIZA */
+
+        text-align: center !important;
         padding: 12px !important;
         border-radius: 8px !important;
     }
