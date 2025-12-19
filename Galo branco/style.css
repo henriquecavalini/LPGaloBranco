@@ -146,20 +146,20 @@ nav i {
 
 .hero-conteudo {
     display: flex;
-    align-items: center;
-    gap: 60px;
-    justify-content: center;
-    max-width: 100%;
+    flex-direction: column;   /* 🔥 CHAVE */
+    align-items: center;      /* centraliza horizontal */
+    justify-content: center;  /* centraliza vertical */
+    text-align: center;
 }
 
+
 .hero-texto {
-    display: flex;
-    /* Remove a centralização de texto global para evitar conflitos */
-    text-align: center;
-    /* Ajuste de margem se necessário */
+    display: block;           /* 🔥 REMOVE FLEX */
     margin: 0 auto;
     max-width: 700px;
+    text-align: center;
 }
+
 
 .hero-texto h2 {
     font-size: 3em;
@@ -184,19 +184,12 @@ nav i {
 
 
 .hero-imagem {
-    /* Mantém as dimensões e o estilo de card */
-    width: 40%;
+    width: auto;
     background: transparent;
     box-shadow: none;
     padding: 0;
-
-    /* Garante que os itens internos fiquem centralizados */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* Centraliza o conteúdo verticalmente */
 }
+
 
 /* NOVO: Estiliza o card que foi movido para o Hero */
 .card-horarios-hero .link-card {
