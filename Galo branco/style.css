@@ -188,10 +188,7 @@ nav i {
     order: 1;                   /* esquerda */
 }
 
-.hero-imagem img {
-    max-width: 380px;
-    width: 100%;
-}
+
 
 /* NOVO: Estiliza o card que foi movido para o Hero */
 .card-horarios-hero .link-card {
