@@ -122,6 +122,7 @@ nav ul {
     display: flex;
     padding: 30px 50px;
     margin-left: auto;
+    justify-content: space-between;
 }
 
 nav a {
