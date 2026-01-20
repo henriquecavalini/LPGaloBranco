@@ -120,6 +120,7 @@ nav ul {
 .nav {
     display: flex;
     padding: 30px 50px;
+    margin-left: auto;
 }
 
 nav a {
