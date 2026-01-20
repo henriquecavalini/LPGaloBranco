@@ -119,6 +119,7 @@ nav ul {
 
 .nav {
     display: flex;
+    padding: 10px 50px;
 }
 
 nav a {
