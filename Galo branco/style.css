@@ -118,7 +118,7 @@ nav ul {
 }
 
 .nav {
-    display: block;
+    display: flex;
 }
 
 nav a {
