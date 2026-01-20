@@ -119,6 +119,7 @@ nav ul {
 
 .nav {
     display: flex;
+    justify-content: flex-end;
 }
 
 nav a {
