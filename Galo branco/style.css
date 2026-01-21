@@ -632,6 +632,47 @@ footer {
     color: #666;
 }
 
+
+/* ==== FIX DEFINITIVO HEADER DESKTOP ==== */
+@media (min-width: 769px) {
+  header {
+    display: block !important;
+  }
+
+  .header-content {
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 40px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important; /* 🔑 esquerda / direita */
+    text-align: left !important;
+  }
+
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px;
+  }
+
+  .logo-imagem {
+    justify-content: flex-start !important;
+  }
+
+  .nav {
+    margin-left: 0 !important;
+  }
+
+  .nav ul {
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 24px;
+  }
+}
+
+
 /* ========================================================= */
 /* --- RESPONSIVIDADE FORÇADA (MOBILE E TABLET) --- */
 /* ========================================================= */
