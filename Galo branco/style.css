@@ -42,10 +42,20 @@ h4 {
 
 /* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
 header {
-  background-color: var(--soft-grey);
-  border-bottom: 2px solid #333;
+    position: relative;
+    display: flex !important;
+    /* 🔑 Isso força a Logo para a esquerda e o Nav para a direita */
+    justify-content: space-between !important; 
+    align-items: center !important;
+    
+    background-color: var(--soft-grey);
+    
+    /* Ajuste o padding lateral para 5% para dar o respiro nas bordas */
+    padding: 15px 5% !important; 
+    border-bottom: 2px solid #333;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
-
 .hamburger {
     display: none;
     background: none;
@@ -94,13 +104,10 @@ header {
 }
 
 .header-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2px;
-
     display: flex;
     align-items: center;
     justify-content: space-between; /* 🔑 separa esquerda e direita */
+    padding: 0 40px;
 }
 
 .logo {
@@ -110,12 +117,15 @@ header {
 }
 
 .nav ul {
-    display: flex;
-    gap: 24px;
+    display: flex !important;
+    gap: 30px !important; /* Aumenta o espaço entre Sobre Nós, Cinema, etc. */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .nav {
-    margin-left: auto;
+    margin-left: auto; /* 🔑 empurra o menu totalmente pra direita */
 }
 
 nav a {
