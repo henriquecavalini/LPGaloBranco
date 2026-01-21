@@ -42,12 +42,20 @@ h4 {
 
 /* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
 header {
+    position: relative;
+    display: flex !important;
+    /* 🔑 Isso força a Logo para a esquerda e o Nav para a direita */
+    justify-content: space-between !important; 
+    align-items: center !important;
+    
     background-color: var(--soft-grey);
-    padding: 15px 0;
+    
+    /* Ajuste o padding lateral para 5% para dar o respiro nas bordas */
+    padding: 15px 5% !important; 
     border-bottom: 2px solid #333;
-    width: 100%;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
-
 .hamburger {
     display: none;
     background: none;
