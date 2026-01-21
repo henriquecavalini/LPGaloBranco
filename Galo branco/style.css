@@ -44,9 +44,18 @@ h4 {
 header {
     position: relative;
     display: flex;
+    /* 🔑 O SEGREDO: Empurra a logo/nome para um lado e o menu para o outro */
+    justify-content: space-between; 
+    align-items: center; /* Centraliza verticalmente os itens */
+    
     background-color: var(--soft-grey);
-    padding: 15px 0;
+    
+    /* Adicione padding lateral (ex: 5%) para o texto não encostar na quina da tela */
+    padding: 15px 5%; 
+    
     border-bottom: 2px solid #333;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hamburger {
