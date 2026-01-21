@@ -43,19 +43,18 @@ h4 {
 /* --- 1. CABEÇALHO / NAVEGAÇÃO --- */
 header {
     position: relative;
-    display: flex;
-    /* 🔑 Isso cria o espaço entre o nome da loja e o menu */
-    justify-content: space-between; 
-    align-items: center; /* Alinha tudo verticalmente no centro */
+    display: flex !important;
+    /* 🔑 Isso força a Logo para a esquerda e o Nav para a direita */
+    justify-content: space-between !important; 
+    align-items: center !important;
     
     background-color: var(--soft-grey);
     
-    /* 5% de padding nas laterais impede que os textos batam na quina da tela */
-    padding: 15px 5%; 
-    
+    /* Ajuste o padding lateral para 5% para dar o respiro nas bordas */
+    padding: 15px 5% !important; 
     border-bottom: 2px solid #333;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100% !important;
+    box-sizing: border-box !important;
 }
 .hamburger {
     display: none;
@@ -119,11 +118,11 @@ header {
 }
 
 .nav ul {
-    display: flex;
-    gap: 20px; /* Espaço entre 'Sobre Nós', 'Cinema', etc. */
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    display: flex !important;
+    gap: 30px !important; /* Aumenta o espaço entre Sobre Nós, Cinema, etc. */
+    list-style: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 .nav {
@@ -134,10 +133,10 @@ header {
 }
 
 nav a {
-    text-decoration: none;
-    color: var(--light-text);
-    font-weight: 600;
-    transition: color 0.3s;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important; /* Impede que o texto quebre linha */
 }
 
 nav a:hover {
