@@ -105,31 +105,24 @@ header {
 
 .header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10 5%;
+    justify-content: space-between; /* 🔑 separa esquerda e direita */
+    padding: 0 40px;
 }
 
 .logo {
     display: flex;
-    font-size: 1.8em;
-    font-weight: 800;
-    color: var(--light-text);
+    align-items: center;
+    gap: 10px;
 }
 
 .nav ul {
-    display: flex !important;
-    gap: 30px !important; /* Aumenta o espaço entre Sobre Nós, Cinema, etc. */
-    list-style: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    display: flex;
+    gap: 24px;
 }
 
 .nav {
-    display: flex;
-    padding: 30px 50px;
-    margin-left: auto;
-    justify-content: space-between;
+    margin-left: auto; /* 🔑 empurra o menu totalmente pra direita */
 }
 
 nav a {
