@@ -108,7 +108,6 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: auto;
 }
 
 .nav ul {
@@ -117,7 +116,7 @@ header {
 }
 
 .nav {
-    margin-left: auto; /* 🔑 empurra o menu totalmente pra direita */
+    margin-left: auto;
 }
 
 nav a {
