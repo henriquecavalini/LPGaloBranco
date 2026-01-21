@@ -44,20 +44,19 @@ h4 {
 header {
     position: relative;
     display: flex;
-    /* 🔑 O SEGREDO: Empurra a logo/nome para um lado e o menu para o outro */
+    /* 🔑 Isso cria o espaço entre o nome da loja e o menu */
     justify-content: space-between; 
-    align-items: center; /* Centraliza verticalmente os itens */
+    align-items: center; /* Alinha tudo verticalmente no centro */
     
     background-color: var(--soft-grey);
     
-    /* Adicione padding lateral (ex: 5%) para o texto não encostar na quina da tela */
-    padding: 15px -10%; 
+    /* 5% de padding nas laterais impede que os textos batam na quina da tela */
+    padding: 15px 5%; 
     
     border-bottom: 2px solid #333;
     width: 100%;
     box-sizing: border-box;
 }
-
 .hamburger {
     display: none;
     background: none;
@@ -119,12 +118,12 @@ header {
     color: var(--light-text);
 }
 
-nav ul {
+.nav ul {
+    display: flex;
+    gap: 20px; /* Espaço entre 'Sobre Nós', 'Cinema', etc. */
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 24px;
 }
 
 .nav {
