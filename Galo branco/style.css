@@ -51,7 +51,7 @@ header {
     background-color: var(--soft-grey);
     
     /* Adicione padding lateral (ex: 5%) para o texto não encostar na quina da tela */
-    padding: 15px 2%; 
+    padding: 15px -10%; 
     
     border-bottom: 2px solid #333;
     width: 100%;
