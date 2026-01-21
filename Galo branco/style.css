@@ -106,8 +106,11 @@ header {
 .header-content {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* 🔑 separa esquerda e direita */
-    padding: 0 90px;
+    justify-content: space-between;
+    padding: 0;               /* 🔥 remove o empurrão central */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;          /* 🔥 centraliza só o container, não os itens */
 }
 
 .logo {
