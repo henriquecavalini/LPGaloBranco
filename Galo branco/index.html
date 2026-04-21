@@ -4,262 +4,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodShop Galo Branco | Food Shop e Conveniência no Shopping</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Foodshop Galo Branco | O Ponto de Encontro com o Sabor</title>
+    
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="logofavicon.png">
+    
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f58d7da5e6.js" crossorigin="anonymous"></script>
+
+    <!-- Script Globais -->
+    <script>
+        const LOJA_NOME = "Foodshop Galo Branco";
+        const WHATSAPP_NUMERO = "5516994398731";
+        const MSG_GERAL = encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!");
+        const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${MSG_GERAL}`;
+        
+        function callWhatsapp(msg) {
+            const finalMsg = msg ? encodeURIComponent(msg) : MSG_GERAL;
+            window.open(`https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${finalMsg}`, "_blank");
+        }
+    </script>
 </head>
 
 <body>
 
-    <script>
-        const LOJA_NOME = "Foodshop Galo Branco";
-        const WHATSAPP_NUMERO = "5516994398731";
-        const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
-    </script>
+    <!-- WhatsApp Flutuante -->
+    <a href="javascript:void(0)" onclick="callWhatsapp()" class="whatsapp-float">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
-
-    <header>
-        <div class="header-content">
-            <a class="logo logo-imagem">
-                <img src="logo.png" alt="Logo FoodShop" class="header-logo-img">
-                <span class="logo-texto" id="logo-nome">Foodshop Galo Branco</span>
+    <!-- Header Glassmorphism -->
+    <header id="navbar">
+        <div class="container header-content">
+            <a href="#hero" class="logo logo-imagem">
+                <img src="logo.png" alt="Logo Galo Branco" class="header-logo-img">
+                <span class="logo-texto">Foodshop<br><span style="color:var(--primary-color);">Galo Branco</span></span>
             </a>
-
-            <nav class="nav">
-                <ul class="nav-list">
-                    <li><a href="indexhome.html"><i class="fa-solid fa-house"></i>Sobre Nós</a></li>
-                    <li><a href="#cinema-full"><i class="fa-solid fa-film"></i>Cinema</a></li>
-                    <li><a href="#ofertas"><i class="fa-solid fa-tags"></i>Promoções</a></li>
-                    <li><a href="#contato"><i class="fa-solid fa-phone"></i>Contato</a></li>
+            <nav>
+                <ul>
+                    <li><a href="#hero"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="#ofertas"><i class="fa-solid fa-tags"></i> Promoções</a></li>
+                    <li><a href="#cinema"><i class="fa-solid fa-film"></i> Cinema</a></li>
+                    <li><a href="#sobre"><i class="fa-solid fa-circle-info"></i> A Loja</a></li>
                 </ul>
             </nav>
-
-            <button class="hamburger" aria-label="Abrir menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
         </div>
     </header>
 
-    <section id="principal" class="hero">
+    <!-- Secao Hero -->
+    <section id="hero" class="hero">
         <div class="container hero-conteudo">
+            <div class="hero-texto">
+                <h2>O Seu Ponto De<br>Encontro com o Sabor.</h2>
+                <div class="subtitle">Aberto 24H no coração do Franca Shopping</div>
+                <h3>Lanches Rápidos, Bebidas Geladas e a Melhor Pipoca de Cinema da Região.</h3>
 
-            <div class="hero-imagem">
-                <img src="logomaiorvariacao.PNG" alt="Logo Foodshop Galo Branco" class="logo-hero">
+                <div class="btn-group">
+                    <a href="#ofertas" class="btn-cta btn-primary">
+                        <i class="fa-solid fa-ticket"></i> Ver Combos
+                    </a>
+                    <a href="javascript:void(0)" onclick="callWhatsapp()" class="btn-cta btn-outline">
+                        <i class="fa-brands fa-whatsapp"></i> Pedir Agora
+                    </a>
+                </div>
             </div>
 
-            <div class="hero-texto">
-                <div class="texto-wrapper">
-                    <h2>Seu Ponto de Encontro com o Sabor.</h2>
-                    <h3>Loja de Conveniência, Lanches Rápidos e Pipoca de Cinema.</h3>
-                    <p class="subtitle">Localizada no coração do Shopping, estamos abertos todos os dias da semana para atender sua fome a
-                        qualquer momento.</p>
+            <div class="hero-imagem">
+                <div class="glow-circle"></div>
+                <!-- Removida a borda e o fundo para a logo fundir melhor com o glow -->
+                <img src="logomaior.png" alt="Logo Gigante Galo Branco" class="hero-img-destaque" style="border: none; box-shadow: drop-shadow(0 15px 25px rgba(0,0,0,0.6));">
+            </div>
+        </div>
+    </section>
 
-                    <a href="#ofertas" class="btn-cta btn-vermelho">
-                        <i class="fa-solid fa-ticket"></i> Ver Promoções de Combo!
-                    </a>
+    <!-- Secao Ofertas (Carrossel) -->
+    <section id="ofertas" class="secao ofertas-bg">
+        <div class="container">
+            <h2 class="secao-titulo">Nossas <span>Promoções</span></h2>
 
-                    <a href="#" class="btn-cta btn-whatsapp" target="_blank" id="cta-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> Chamar no WhatsApp
-                    </a>
+            <div class="carousel-wrapper">
+                <button class="nav-arrow left-arrow" id="btnLeft"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="nav-arrow right-arrow" id="btnRight"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="carousel-clipper">
+                    <div class="promocao-items-container" id="promocoes-slider">
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="coca.jpg" class="produto-img" alt="Coca Cola">
+                            </div>
+                            <h4>Combo Refrescante</h4>
+                            <p class="detalhes">Descrição rápida da promoção.</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 15,90</span>
+                                <span class="preco-promocao">R$ 9,90</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir o Combo Refrescante (Promo 1)')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="cocappc.jpg" class="produto-img" alt="Pipoca e Coca">
+                            </div>
+                            <h4>Sessão Pipoca</h4>
+                            <p class="detalhes">Mais uma oferta pra chamar atenção.</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 35,00</span>
+                                <span class="preco-promocao">R$ 29,90</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir o Combo Sessão Pipoca')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="coxinha.PNG" class="produto-img" alt="Coxinha">
+                            </div>
+                            <h4>Sabor Tradicional</h4>
+                            <p class="detalhes">Outra promoção bacana.</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 19,90</span>
+                                <span class="preco-promocao">R$ 14,90</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir o Combo Sabor Tradicional')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="ppc.PNG" class="produto-img" alt="Lanche">
+                            </div>
+                            <h4>Almoço Completo</h4>
+                            <p class="detalhes">Lanche completo, perfeito para o almoço.</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 28,00</span>
+                                <span class="preco-promocao">R$ 19,90</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir o Almoço Completo')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="pepsi.PNG" class="produto-img" alt="Pepsi">
+                            </div>
+                            <h4>Energia Rápida</h4>
+                            <p class="detalhes">Opção saudável e refrescante.</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 8,00</span>
+                                <span class="preco-promocao">R$ 5,50</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir a Pepsi (Promo 5)')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                        <div class="promocao-card">
+                            <div class="produto-img-wrapper">
+                                <img src="salgado.PNG" class="produto-img" alt="Salgado">
+                            </div>
+                            <h4>A Favorita</h4>
+                            <p class="detalhes">Coxinha ou Esfiha. Escolha o seu!</p>
+                            <div class="preco-container">
+                                <span class="preco-antigo">R$ 10,00</span>
+                                <span class="preco-promocao">R$ 6,99</span>
+                            </div>
+                            <a href="javascript:void(0)" onclick="callWhatsapp('Gostaria de pedir o combo A Favorita')" class="btn-card">Quero esse!</a>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    <section id="cinema-full" class="secao cinema-full-width">
-        <div class="container">
-            <h3>📽️ Horários de Cinema em Destaque!</h3>
+
+    <!-- Secao Cinema -->
+    <section id="cinema" class="secao cinema-bg">
+        <div class="container cinema-container">
+            <h2 class="secao-titulo">Sessões <span>no Cinema</span></h2>
+            
             <div class="cinema-iframe-full-container">
-                <iframe src="https://www.veloxtickets.com/Portal/Local/Cinema/Franca/Moviecom-Cinemas-Franca/FRC"
+                <iframe
+                    src="https://www.veloxtickets.com/Portal/Local/Cinema/Franca/Moviecom-Cinemas-Franca/FRC"
                     title="Horários do Cinema Completa" class="cinema-iframe-full-width">
                 </iframe>
             </div>
         </div>
     </section>
 
-    <section id="ofertas" class="secao ofertas-carousel">
+    <!-- Secao Sobre a Loja -->
+    <section id="sobre" class="secao sobre-bg">
         <div class="container">
-            <h3>Promoções</h3>
-
-            <div class="carousel-wrapper">
-                <button class="nav-arrow left-arrow" id="btnLeft"><i class="fa-solid fa-chevron-left"></i></button>
-                <button class="nav-arrow right-arrow" id="btnRight"><i class="fa-solid fa-chevron-right"></i></button>
-
-                <div class="promocao-items-container" id="promocoes-slider">
-
-                    <div class="promocao-card">
-                        <img src="coca.jpg" class="produto-img">
-                        <h4>Promoção 1</h4>
-                        <span class="preco-antigo">R$ 15,90</span>
-                        <span class="preco-promocao">R$ 9,90</span>
-                        <p class="detalhes">Descrição rápida da promoção.</p>
-                    </div>
-
-                    <div class="promocao-card">
-                        <img src="cocappc.jpg" class="produto-img">
-                        <h4>Promoção 2</h4>
-                        <span class="preco-antigo">R$ 35,00</span>
-                        <span class="preco-promocao">R$ 29,90</span>
-                        <p class="detalhes">Mais uma oferta pra chamar atenção.</p>
-
-                    </div>
-
-                    <div class="promocao-card">
-                        <img src="coxinha.PNG" class="produto-img">
-                        <h4>Promoção 3</h4>
-                        <span class="preco-antigo">R$ 19,90</span>
-                        <span class="preco-promocao">R$ 14,90</span>
-                        <p class="detalhes">Outra promoção bacana.</p>
-
-                    </div>
-                    <div class="promocao-card">
-                        <img src="ppc.PNG" class="produto-img">
-                        <h4>Promoção 4</h4>
-                        <span class="preco-antigo">R$ 28,00</span>
-                        <span class="preco-promocao">R$ 19,90</span>
-                        <p class="detalhes">Lanche completo, perfeito para o almoço.</p>
-                    </div>
-
-                    <div class="promocao-card">
-                        <img src="pepsi.PNG" class="produto-img">
-                        <h4>Promoção 5</h4>
-                        <span class="preco-antigo">R$ 8,00</span>
-                        <span class="preco-promocao">R$ 5,50</span>
-                        <p class="detalhes">Opção saudável e refrescante.</p>
-                    </div>
-
-                    <div class="promocao-card">
-                        <img src="salgado.PNG" class="produto-img">
-                        <h4>Promoção 6</h4>
-                        <span class="preco-antigo">R$ 10,00</span>
-                        <span class="preco-promocao">R$ 6,99</span>
-                        <p class="detalhes">Coxinha ou Esfiha. Escolha o seu!</p>
+            <h2 class="secao-titulo">Nossa <span>História</span></h2>
+            
+            <div class="sobre-grid">
+                <div class="sobre-texto">
+                    <h3>Mais que Conveniência, Seu Ponto de Encontro.</h3>
+                    <p>A <strong>Foodshop Galo Branco</strong> nasceu com uma missão simples: transformar a espera no shopping em um momento de puro prazer e acessibilidade.</p>
+                    <p>Priorizamos produtos sempre frescos, aquela pipoca feita na hora que você ama, e um atendimento premium 24h na Praça de Alimentação. Você nunca mais vai perder o início do filme!</p>
+                    
+                    <ul class="valores-lista">
+                        <li><i class="fa-solid fa-star"></i> Qualidade Superior nos Ingredientes</li>
+                        <li><i class="fa-solid fa-clock"></i> Operação Realmente 24 Horas</li>
+                        <li><i class="fa-solid fa-location-dot"></i> Ao Lado do Cinema</li>
+                    </ul>
+                </div>
+                
+                <div class="localizacao">
+                    <div class="location-card">
+                        <div class="mapa-wrap">
+                            <img src="galo.png" alt="Mapa da Localização">
+                        </div>
+                        <div class="location-info">
+                            <h4><i class="fa-solid fa-map-pin"></i> Franca Shopping</h4>
+                            <p>Praça de Alimentação (Ao lado do Cinema)<br>Av. Rio Negro, 1100 - Jardim Roselandia</p>
+                            <p style="margin-top:10px; color:var(--primary-color);"><strong>Aberto das 10h da Manhã às 10h da Noite! / Sexta e Fim de Semana 24H</strong></p>
+                        </div>
+                        <a href="https://www.google.com.br/maps/place/Galo+Branco+Shop+%2F+Franca+Shopping/" target="_blank" class="btn-cta btn-primary" style="width:100%;">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Ver no Google Maps
+                        </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <footer id="contato">
+    <!-- Footer -->
+    <footer>
         <div class="container">
-            <img src="logovariacao.PNG" alt="Logo SnackMania" class="header-logo-img">
-            <p class="logo"> Foodshop Galo Branco</p>
-            <p>Localização: Franca Shopping, Av. Rio Negro, 1100 - Jardim Roselandia, Franca - SP, 14406-00 | Aberto das
-                10 da Manhã as 10 da Noite !</p>
-                <p>Telefone: 55 (16)99439-8731 </p>
-            <p class="copyright">&copy; 2025 Foodshop Galo Branco. Todos os direitos reservados.</p>
+            <div class="footer-logo">
+                <img src="logo.png" alt="Logo Foodshop">
+                <h3 style="color:var(--text-main); font-weight:900;">Foodshop <span style="color:var(--primary-color)">Galo Branco</span></h3>
+            </div>
+            
+            <p style="color:var(--text-muted); max-width:500px; margin:0 auto;">O melhor da conveniência, pipoca e lanches e bebidas geladas a qualquer hora no Franca Shopping.</p>
+            
+            <div class="footer-social">
+                <a href="https://www.instagram.com/galobrancoshop/" target="_blank" class="social-link insta"><i class="fa-brands fa-instagram"></i></a>
+                <a href="javascript:void(0)" onclick="callWhatsapp()" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="footer-copy">
+                &copy; 2025 Foodshop Galo Branco. Todos os direitos reservados.
+            </div>
         </div>
     </footer>
 
+    <!-- Scripts de Funcionalidade -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const hamburger = document.querySelector('.hamburger');
-            const nav = document.querySelector('.nav');
+            
+            // Controle simples do Carrossel (Promoções)
+            const slider = document.getElementById('promocoes-slider');
+            const btnLeft = document.getElementById('btnLeft');
+            const btnRight = document.getElementById('btnRight');
+            let currentTranslate = 0;
+            
+            function getCardWidth() {
+                const card = slider.querySelector('.promocao-card');
+                if(!card) return 300;
+                return card.offsetWidth + 30; // largura + gap
+            }
+            
+            function getMaxTranslate() {
+                const max = slider.scrollWidth - slider.parentElement.clientWidth;
+                return max > 0 ? -max : 0;
+            }
 
-            // Abrir / fechar no botão
-            hamburger.addEventListener("click", function (e) {
-                e.stopPropagation(); // impede fechar imediatamente
-                hamburger.classList.toggle("active");
-                nav.classList.toggle("active");
+            btnLeft.addEventListener('click', () => {
+                const dist = getCardWidth();
+                currentTranslate += dist;
+                if(currentTranslate > 0) currentTranslate = 0;
+                slider.style.transform = `translateX(${currentTranslate}px)`;
             });
 
-            // 🔥 FECHAR AO CLICAR FORA
-            document.addEventListener("click", function (e) {
-                const clicouNoMenu = nav.contains(e.target);
-                const clicouNoBotao = hamburger.contains(e.target);
+            btnRight.addEventListener('click', () => {
+                const dist = getCardWidth();
+                const max = getMaxTranslate();
+                currentTranslate -= dist;
+                if(currentTranslate < max) currentTranslate = max;
+                slider.style.transform = `translateX(${currentTranslate}px)`;
+            });
 
-                if (!clicouNoMenu && !clicouNoBotao) {
-                    hamburger.classList.remove("active");
-                    nav.classList.remove("active");
+            // Efeito na Navbar ao rolar a página
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.style.background = 'rgba(68, 68, 68, 0.98)';
+                    navbar.style.boxShadow = '0 5px 15px rgba(0,0,0,0.5)';
+                } else {
+                    navbar.style.background = 'rgba(68, 68, 68, 0.85)';
+                    navbar.style.boxShadow = 'none';
                 }
             });
-
-            // 🔥 FECHAR AO CLICAR EM UM LINK
-            nav.querySelectorAll("a").forEach(link => {
-                link.addEventListener("click", () => {
-                    hamburger.classList.remove("active");
-                    nav.classList.remove("active");
-                });
-            });
-            const LOJA_NOME = "Foodshop Galo Branco"; // opcional, já tinha no seu script
-            const WHATSAPP_NUMERO = "5516994398731";
-            const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!")}`;
-
-            // Injeções UI (mantive)
-            const ctaWhatsapp = document.getElementById('cta-whatsapp');
-            if (ctaWhatsapp) { ctaWhatsapp.href = WHATSAPP_URL; ctaWhatsapp.target = "_blank"; }
-
-            // Elementos do carrossel
-            const slider = document.getElementById('promocoes-slider');
-            const leftArrow = document.getElementById('btnLeft');
-            const rightArrow = document.getElementById('btnRight');
-
-            if (!slider) { console.error("Slider não encontrado (#promocoes-slider)."); return; }
-            if (!leftArrow || !rightArrow) { console.error("Setas não encontradas (btnLeft/btnRight)."); }
-
-            // DEBUG: confirma clique
-            leftArrow.addEventListener('click', e => { console.log('left clicked'); });
-            rightArrow.addEventListener('click', e => { console.log('right clicked'); });
-
-            // Segurança: força tipo button (evita comportamento de submit)
-            leftArrow.type = "button";
-            rightArrow.type = "button";
-
-            // Medidas
-            let currentX = 0;
-            const gap = 20;
-            // calc distance dinamicamente pela largura do primeiro card visível
-            function getScrollDistance() {
-                const firstCard = slider.querySelector('.promocao-card');
-                if (!firstCard) return 300;
-                // usa largura real do elemento (incluindo gap)
-                const style = window.getComputedStyle(firstCard);
-                const w = firstCard.getBoundingClientRect().width;
-                const g = parseInt(style.marginRight || gap) || gap;
-                return Math.round(w + gap);
-            }
-
-            function clamp(val, min, max) { return Math.max(min, Math.min(max, val)); }
-
-            function updateTransform() {
-                slider.style.transform = `translateX(${currentX}px)`;
-            }
-
-            // calcula máximo deslocamento negativo (quando exposto todo o conteúdo)
-            function getMaxNegative() {
-                const maxScroll = slider.scrollWidth - (slider.parentElement ? slider.parentElement.clientWidth : document.documentElement.clientWidth);
-                return -Math.max(0, Math.floor(maxScroll));
-            }
-
-            leftArrow.addEventListener('click', () => {
-                const distance = getScrollDistance();
-                currentX = clamp(currentX + distance, getMaxNegative(), 0);
-                updateTransform();
-            });
-
-            rightArrow.addEventListener('click', () => {
-                const distance = getScrollDistance();
-                currentX = clamp(currentX - distance, getMaxNegative(), 0);
-                updateTransform();
-            });
-
-            // Acessibilidade: navegação por teclado
-            leftArrow.addEventListener('keydown', e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); leftArrow.click(); } });
-            rightArrow.addEventListener('keydown', e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); rightArrow.click(); } });
-
-            // Reajusta se redimensionar
-            window.addEventListener('resize', () => {
-                // garante que não fique deslocado além do permitido
-                currentX = clamp(currentX, getMaxNegative(), 0);
-                updateTransform();
-            });
+            
         });
     </script>
 </body>
-
 </html>
