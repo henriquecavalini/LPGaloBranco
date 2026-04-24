@@ -26,6 +26,11 @@
             const finalMsg = msg ? encodeURIComponent(msg) : MSG_GERAL;
             window.open(`https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${finalMsg}`, "_blank");
         }
+        
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('active');
+        }
     </script>
 </head>
 
@@ -43,12 +48,17 @@
                 <img src="logo.png" alt="Logo Galo Branco" class="header-logo-img">
                 <span class="logo-texto">Foodshop<br><span style="color:var(--primary-color);">Galo Branco</span></span>
             </a>
-            <nav>
+            
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="#hero"><i class="fa-solid fa-house"></i> Início</a></li>
-                    <li><a href="#ofertas"><i class="fa-solid fa-tags"></i> Promoções</a></li>
-                    <li><a href="#cinema"><i class="fa-solid fa-film"></i> Cinema</a></li>
-                    <li><a href="#sobre"><i class="fa-solid fa-circle-info"></i> A Loja</a></li>
+                    <li><a href="#hero" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Início</a></li>
+                    <li><a href="#ofertas" onclick="toggleMenu()"><i class="fa-solid fa-tags"></i> Promoções</a></li>
+                    <li><a href="#cinema" onclick="toggleMenu()"><i class="fa-solid fa-film"></i> Cinema</a></li>
+                    <li><a href="#sobre" onclick="toggleMenu()"><i class="fa-solid fa-circle-info"></i> A Loja</a></li>
                 </ul>
             </nav>
         </div>
@@ -66,7 +76,7 @@
                     <a href="#ofertas" class="btn-cta btn-primary">
                         <i class="fa-solid fa-ticket"></i> Ver Combos
                     </a>
-                    <a href="javascript:void(0)" onclick="callWhatsapp()" class="btn-cta btn-outline">
+                    <a href="javascript:void(0)" onclick="callWhatsapp()" class="btn-cta btn-outline btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i> Pedir Agora
                     </a>
                 </div>
