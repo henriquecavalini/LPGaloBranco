@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodshop Galo Branco | O Ponto de Encontro com o Sabor</title>
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="logofavicon.png">
-    
+
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/f58d7da5e6.js" crossorigin="anonymous"></script>
+
+    <!-- Firebase SDKs -->
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
 
     <!-- Script Globais -->
     <script>
@@ -21,12 +25,12 @@
         const WHATSAPP_NUMERO = "5516994398731";
         const MSG_GERAL = encodeURIComponent("Olá, gostaria de fazer um pedido de lanches e pipoca!");
         const WHATSAPP_URL = `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${MSG_GERAL}`;
-        
+
         function callWhatsapp(msg) {
             const finalMsg = msg ? encodeURIComponent(msg) : MSG_GERAL;
             window.open(`https://api.whatsapp.com/send?phone=${WHATSAPP_NUMERO}&text=${finalMsg}`, "_blank");
         }
-        
+
         function toggleMenu() {
             const nav = document.getElementById('nav-menu');
             nav.classList.toggle('active');
@@ -48,11 +52,11 @@
                 <img src="logo.png" alt="Logo Galo Branco" class="header-logo-img">
                 <span class="logo-texto">Foodshop<br><span style="color:var(--primary-color);">Galo Branco</span></span>
             </a>
-            
+
             <div class="menu-toggle" onclick="toggleMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            
+
             <nav id="nav-menu">
                 <ul>
                     <li><a href="#hero" onclick="toggleMenu()"><i class="fa-solid fa-house"></i> Início</a></li>
@@ -85,7 +89,8 @@
             <div class="hero-imagem">
                 <div class="glow-circle"></div>
                 <!-- Removida a borda e o fundo para a logo fundir melhor com o glow -->
-                <img src="logomaior.png" alt="Logo Gigante Galo Branco" class="hero-img-destaque" style="border: none; box-shadow: drop-shadow(0 15px 25px rgba(0,0,0,0.6));">
+                <img src="logomaior.png" alt="Logo Gigante Galo Branco" class="hero-img-destaque"
+                    style="border: none; box-shadow: drop-shadow(0 15px 25px rgba(0,0,0,0.6));">
             </div>
         </div>
     </section>
@@ -190,10 +195,9 @@
     <section id="cinema" class="secao cinema-bg">
         <div class="container cinema-container">
             <h2 class="secao-titulo">Sessões <span>no Cinema</span></h2>
-            
+
             <div class="cinema-iframe-full-container">
-                <iframe
-                    src="https://www.veloxtickets.com/Portal/Local/Cinema/Franca/Moviecom-Cinemas-Franca/FRC"
+                <iframe src="https://www.veloxtickets.com/Portal/Local/Cinema/Franca/Moviecom-Cinemas-Franca/FRC"
                     title="Horários do Cinema Completa" class="cinema-iframe-full-width">
                 </iframe>
             </div>
@@ -204,20 +208,22 @@
     <section id="sobre" class="secao sobre-bg">
         <div class="container">
             <h2 class="secao-titulo">Nossa <span>História</span></h2>
-            
+
             <div class="sobre-grid">
                 <div class="sobre-texto">
                     <h3>Mais que Conveniência, Seu Ponto de Encontro.</h3>
-                    <p>A <strong>Foodshop Galo Branco</strong> nasceu com uma missão simples: transformar a espera no shopping em um momento de puro prazer e acessibilidade.</p>
-                    <p>Priorizamos produtos sempre frescos, aquela pipoca feita na hora que você ama, e um atendimento premium 24h na Praça de Alimentação. Você nunca mais vai perder o início do filme!</p>
-                    
+                    <p>A <strong>Foodshop Galo Branco</strong> nasceu com uma missão simples: transformar a espera no
+                        shopping em um momento de puro prazer e acessibilidade.</p>
+                    <p>Priorizamos produtos sempre frescos, aquela pipoca feita na hora que você ama, e um atendimento
+                        premium 24h na Praça de Alimentação. Você nunca mais vai perder o início do filme!</p>
+
                     <ul class="valores-lista">
                         <li><i class="fa-solid fa-star"></i> Qualidade Superior nos Ingredientes</li>
                         <li><i class="fa-solid fa-clock"></i> Operação Realmente 24 Horas</li>
                         <li><i class="fa-solid fa-location-dot"></i> Ao Lado do Cinema</li>
                     </ul>
                 </div>
-                
+
                 <div class="localizacao">
                     <div class="location-card">
                         <div class="mapa-wrap">
@@ -226,9 +232,11 @@
                         <div class="location-info">
                             <h4><i class="fa-solid fa-map-pin"></i> Franca Shopping</h4>
                             <p>Praça de Alimentação (Ao lado do Cinema)<br>Av. Rio Negro, 1100 - Jardim Roselandia</p>
-                            <p style="margin-top:10px; color:var(--primary-color);"><strong>Aberto das 10h da Manhã às 10h da Noite! / Sexta e Fim de Semana 24H</strong></p>
+                            <p style="margin-top:10px; color:var(--primary-color);"><strong>Aberto das 10h da Manhã às
+                                    10h da Noite! / Sexta e Fim de Semana 24H</strong></p>
                         </div>
-                        <a href="https://www.google.com.br/maps/place/Galo+Branco+Shop+%2F+Franca+Shopping/" target="_blank" class="btn-cta btn-primary" style="width:100%;">
+                        <a href="https://www.google.com.br/maps/place/Galo+Branco+Shop+%2F+Franca+Shopping/"
+                            target="_blank" class="btn-cta btn-primary" style="width:100%;">
                             <i class="fa-solid fa-diamond-turn-right"></i> Ver no Google Maps
                         </a>
                     </div>
@@ -242,18 +250,22 @@
         <div class="container">
             <div class="footer-logo">
                 <img src="logo.png" alt="Logo Foodshop">
-                <h3 style="color:var(--text-main); font-weight:900;">Foodshop <span style="color:var(--primary-color)">Galo Branco</span></h3>
+                <h3 style="color:var(--text-main); font-weight:900;">Foodshop <span
+                        style="color:var(--primary-color)">Galo Branco</span></h3>
             </div>
-            
-            <p style="color:var(--text-muted); max-width:500px; margin:0 auto;">O melhor da conveniência, pipoca e lanches e bebidas geladas a qualquer hora no Franca Shopping.</p>
-            
+
+            <p style="color:var(--text-muted); max-width:500px; margin:0 auto;">O melhor da conveniência, pipoca e
+                lanches e bebidas geladas a qualquer hora no Franca Shopping.</p>
+
             <div class="footer-social">
-                <a href="https://www.instagram.com/galobrancoshop/" target="_blank" class="social-link insta"><i class="fa-brands fa-instagram"></i></a>
-                <a href="javascript:void(0)" onclick="callWhatsapp()" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/galobrancoshop/" target="_blank" class="social-link insta"><i
+                        class="fa-brands fa-instagram"></i></a>
+                <a href="javascript:void(0)" onclick="callWhatsapp()" class="social-link"><i
+                        class="fa-brands fa-whatsapp"></i></a>
             </div>
-            
+
             <div class="footer-copy">
-                &copy; 2025 Foodshop Galo Branco. Todos os direitos reservados.
+                &copy; 2025 Foodshop Galo Branco. Todos os direitos reservados. | <a href="painel.html" style="color:var(--text-muted); text-decoration:none; transition: color 0.3s;" onmouseover="this.style.color='var(--primary-color)'" onmouseout="this.style.color='var(--text-muted)'"><i class="fa-solid fa-lock" style="font-size: 0.8rem;"></i> Área Restrita</a>
             </div>
         </div>
     </footer>
@@ -261,19 +273,19 @@
     <!-- Scripts de Funcionalidade -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            
+
             // Controle simples do Carrossel (Promoções)
             const slider = document.getElementById('promocoes-slider');
             const btnLeft = document.getElementById('btnLeft');
             const btnRight = document.getElementById('btnRight');
             let currentTranslate = 0;
-            
+
             function getCardWidth() {
                 const card = slider.querySelector('.promocao-card');
-                if(!card) return 300;
+                if (!card) return 300;
                 return card.offsetWidth + 30; // largura + gap
             }
-            
+
             function getMaxTranslate() {
                 const max = slider.scrollWidth - slider.parentElement.clientWidth;
                 return max > 0 ? -max : 0;
@@ -282,7 +294,7 @@
             btnLeft.addEventListener('click', () => {
                 const dist = getCardWidth();
                 currentTranslate += dist;
-                if(currentTranslate > 0) currentTranslate = 0;
+                if (currentTranslate > 0) currentTranslate = 0;
                 slider.style.transform = `translateX(${currentTranslate}px)`;
             });
 
@@ -290,7 +302,7 @@
                 const dist = getCardWidth();
                 const max = getMaxTranslate();
                 currentTranslate -= dist;
-                if(currentTranslate < max) currentTranslate = max;
+                if (currentTranslate < max) currentTranslate = max;
                 slider.style.transform = `translateX(${currentTranslate}px)`;
             });
 
@@ -305,6 +317,69 @@
                     navbar.style.boxShadow = 'none';
                 }
             });
+
+            // ----------------------------------------
+            // INTEGRAÇÃO FIREBASE (PROMOÇÕES)
+            // ----------------------------------------
+            const firebaseConfig = {
+              apiKey: "AIzaSyBIGBmc-K8thWtUF2S0OMUYsTBNMAf1JHs",
+              authDomain: "galo-branco-d5e13.firebaseapp.com",
+              projectId: "galo-branco-d5e13",
+              storageBucket: "galo-branco-d5e13.firebasestorage.app",
+              messagingSenderId: "1035066404523",
+              appId: "1:1035066404523:web:8d808730e7ca4bd7f311ee",
+              measurementId: "G-NCMQYXS8P3"
+            };
+
+                        if (firebaseConfig.projectId) {
+                try {
+                    console.log("index.html: Inicializando Firebase...");
+                    firebase.initializeApp(firebaseConfig);
+                    const db = firebase.firestore();
+                    console.log("index.html: Firebase inicializado. Iniciando escuta da coleção 'promocoes'...");
+
+                    db.collection("promocoes").onSnapshot((querySnapshot) => {
+                        console.log("index.html: Resposta em tempo real do banco recebida! Qtd itens:", querySnapshot.size);
+                        if (!querySnapshot.empty) {
+                            const container = document.getElementById('promocoes-slider');
+                            container.innerHTML = ''; // Limpa as hardcoded sempre que houver dados
+
+                            querySnapshot.forEach((doc) => {
+                                const promo = doc.data();
+                                const precoAntigoHTML = promo.price_old ? `<span class="preco-antigo">${promo.price_old}</span>` : '';
+                                const imgSrc = promo.image || 'logo.png'; // Fallback
+                                
+                                const cardHTML = `
+                                <div class="promocao-card">
+                                    <div class="produto-img-wrapper">
+                                        <img src="${imgSrc}" class="produto-img" alt="${promo.title}">
+                                    </div>
+                                    <h4>${promo.title}</h4>
+                                    <p class="detalhes">${promo.description}</p>
+                                    <div class="preco-container">
+                                        ${precoAntigoHTML}
+                                        <span class="preco-promocao">${promo.price}</span>
+                                    </div>
+                                    <a href="javascript:void(0)" onclick="callWhatsapp('${promo.whatsapp_msg}')" class="btn-card">Quero esse!</a>
+                                </div>`;
+                                
+                                container.innerHTML += cardHTML;
+                            });
+                            
+                            // Atualiza as posições do carrossel se necessário
+                            currentTranslate = 0;
+                            slider.style.transform = `translateX(0px)`;
+                        } else {
+                            console.log("index.html: O banco de dados de promoções está vazio no momento.");
+                        }
+                    }, (error) => {
+                        console.error("index.html: Erro ao escutar promoções em tempo real:", error);
+                        alert("Erro ao conectar com o banco do site principal. Verifique o console.");
+                    });
+                } catch (e) {
+                    console.error("index.html: Erro na inicialização do Firebase:", e);
+                }
+            }
             
         });
     </script>
