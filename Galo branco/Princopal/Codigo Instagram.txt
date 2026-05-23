@@ -1,0 +1,10 @@
+            <div class="hero-imagem instagram-feed-hero">
+                <h4><i class="fa-brands fa-instagram"></i> Posts Recentes</h4>
+
+                <div class="instagram-grid-placeholder">
+                    <i class="fa-solid fa-camera fa-2x" style="color: #ccc; margin-bottom: 10px;"></i>
+                    <p>Acesse nosso perfil para ver as novidades!</p>
+                </div>
+
+		<a href="https://www.instagram.com/galobrancoshop/" target="_blank" class="btn-link-insta">Ver Perfil
+                    Completo</a>
